@@ -19,11 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         GMSServices.provideAPIKey("AIzaSyDSSMfuFX2ly2Qf1A0MaHawZ5Gc-L7w3Yw")
+    
+        let userController = UserController.sharedInstance
+        userController.loadUserLocal()
         
-        let rootVC = MySumitVC()
+        var rootVC: UIViewController?
         
-        self.window?.rootViewController = UINavigationController(rootViewController: rootVC)
+        if userController.currentUser == nil {
+            rootVC = CreateVC()
+        } else {
+            rootVC = MySumitVC()
+        }
         
+        self.window?.rootViewController = UINavigationController(rootViewController: rootVC!)
+
         return true
     }
 

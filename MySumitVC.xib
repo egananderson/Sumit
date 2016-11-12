@@ -33,7 +33,7 @@
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adv-XA-GDu">
                     <rect key="frame" x="167" y="609" width="40" height="30"/>
-                    <state key="normal" title="Sumit"/>
+                   <state key="normal" title="Sumit"/>
                     <connections>
                         <action selector="sumitButtonTapped:" destination="-1" eventType="touchUpInside" id="E0q-dO-erd"/>
                     </connections>
