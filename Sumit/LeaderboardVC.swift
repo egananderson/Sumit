@@ -33,6 +33,10 @@ class LeaderboardVC: UIViewController {
     }
 
     // MARK: Actions
+    @IBAction func swipeUp(_ sender: UISwipeGestureRecognizer) {
+        let userController = UserController.sharedInstance
+        userController.logout()
+    }
     
     @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)

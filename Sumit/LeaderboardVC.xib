@@ -242,12 +242,18 @@
             </constraints>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="qK8-pb-OaB" appends="YES" id="fs4-U2-wbw"/>
+                <outletCollection property="gestureRecognizers" destination="vZd-e4-SHA" appends="YES" id="E8K-N0-pTp"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
         <swipeGestureRecognizer direction="down" id="qK8-pb-OaB">
             <connections>
                 <action selector="swipeDown:" destination="-1" id="SMQ-S5-KFe"/>
+            </connections>
+        </swipeGestureRecognizer>
+        <swipeGestureRecognizer direction="up" id="vZd-e4-SHA">
+            <connections>
+                <action selector="swipeUp:" destination="-1" id="ZPT-Lu-I1X"/>
             </connections>
         </swipeGestureRecognizer>
     </objects>

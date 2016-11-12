@@ -26,26 +26,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var rootVC: UIViewController?
         
-        if userController.currentUser == nil {
-            rootVC = CreateVC()
-            self.window?.rootViewController = UINavigationController(rootViewController: rootVC!)
-        } else {
-            let mapController = MapController.sharedInstance
-            mapController.selectDestinations(completion: { (success, error) in
-                if !success {
-                    print("error app delegate")
-                } else {
-                    DispatchQueue.main.async(execute: { 
+        let mapController = MapController.sharedInstance
+        mapController.selectDestinations(completion: { (success, error) in
+            if !success {
+                print("error app delegate")
+            } else {
+                DispatchQueue.main.async(execute: {
+                    if userController.currentUser == nil {
+                        rootVC = CreateVC()
+                        self.window?.rootViewController = UINavigationController(rootViewController: rootVC!)
+                    } else {
                         mapController.mapVC?.addDestinations(destinations: mapController.destinations!)
                         rootVC = mapController.mapVC
                         self.window?.rootViewController = rootVC!
-                    })
-                }
-            })
-        }
-        
-        
-
+                    }
+                })
+            }
+        })
         return true
     }
 

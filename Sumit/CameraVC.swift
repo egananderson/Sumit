@@ -23,6 +23,7 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         textField.text = ""
         textField.backgroundColor = UIColor.clear
         textField.font = UIFont(name: (textField.font?.fontName)!, size: 30)
+        textField.textColor = UIColor.white
         
         continueButton.isHidden = true
         
