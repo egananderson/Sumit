@@ -41,7 +41,12 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    // MARK: Interface methods
+    
+    func progUI() {
+        
+    }
     @IBAction func sumitButtonTapped(_ sender: UIButton) {
         locationManager = CLLocationManager();
         locationManager.delegate = self
