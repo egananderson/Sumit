@@ -10,6 +10,7 @@ import Foundation
 
 let UserIDKey: String = "UserID"
 let UsernameKey: String = "UsernameKey"
+let ScoreKey: String = "ScoreKey"
 
 class UserController: NSObject {
     
@@ -79,11 +80,17 @@ class UserController: NSObject {
                     
                     guard let userID = responseDict["uid"] as? Int else {
                         completion(false, nil)
-                        print("Could not get username")
+                        print("Could not get userID")
                         return
                     }
                     
-                    let user = User(id: userID, user: username)
+                    guard let score = responseDict["score"] as? Int else {
+                        completion(false, nil)
+                        print("Could not get score")
+                        return
+                    }
+                    
+                    let user = User(id: userID, user: username, score: score)
                     self.currentUser = user
                     self.saveUserLocal()
                     
@@ -110,12 +117,13 @@ class UserController: NSObject {
         
         let userID = defaults.integer(forKey: UserIDKey)
         let username = defaults.string(forKey: UsernameKey)
+        let score = defaults.integer(forKey: ScoreKey)
         
         if (username == nil) {
             // do nothing
         } else {
             
-            let user = User(id: userID, user: username!)
+            let user = User(id: userID, user: username!, score: score)
             currentUser = user
         }
     }
@@ -127,9 +135,11 @@ class UserController: NSObject {
         
         let userID = currentUser?.userID
         let username = currentUser?.username
+        let score = currentUser?.score
         
         defaults.set(userID, forKey: UserIDKey)
         defaults.set(username, forKey: UsernameKey)
+        defaults.set(score, forKey: ScoreKey)
         
         defaults.synchronize()
     }
@@ -141,6 +151,7 @@ class UserController: NSObject {
         
         defaults.removeObject(forKey: UserIDKey)
         defaults.removeObject(forKey: UsernameKey)
+        defaults.removeObject(forKey: ScoreKey)
         
         defaults.synchronize()
     }

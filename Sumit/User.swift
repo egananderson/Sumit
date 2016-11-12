@@ -12,11 +12,13 @@ class User: NSObject {
     
     let userID: Int
     let username: String
+    let score: Int
     
-    init(id: Int, user: String) {
+    init(id: Int, user: String, score: Int) {
         
         userID = id
         username = user
+        self.score = score
         
     }
 }

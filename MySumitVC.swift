@@ -12,6 +12,9 @@ import CoreLocation
 class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet var sumitButton: UIButton!
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
+    
     
     var locationManager: CLLocationManager!
 
@@ -30,6 +33,15 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         
         let nib = UINib(nibName: "SumitCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "sumitCell")
+        
+        let userController = UserController.sharedInstance
+        usernameLabel.text = userController.currentUser?.username
+        usernameLabel.font = usernameLabel.font.withSize(30)
+        scoreLabel.text = String(describing: userController.currentUser!.score)
+        scoreLabel.font = scoreLabel.font.withSize(30)
+        
+        self.navigationController?.navigationBar.isHidden = true
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,7 +50,8 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     }
 
     @IBAction func sumitButtonTapped(_ sender: UIButton) {
-
+        print("latitude = \(locationManager.location!.coordinate.latitude)")
+        print("longitude = \(locationManager.location!.coordinate.longitude)")
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
@@ -60,7 +73,7 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         
         let spacing: CGFloat = 3.0
         
-        let width: CGFloat = (screenWidth / 2) - spacing
+        let width: CGFloat = (screenWidth / 4) - spacing
         
         let size = CGSize(width: width, height: width)
         

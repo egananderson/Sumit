@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,19 +18,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Qz-HG-jkW">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sumitlogo" translatesAutoresizingMaskIntoConstraints="NO" id="5Qz-HG-jkW">
                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="50" id="TzD-V1-TQe"/>
-                            <constraint firstAttribute="width" constant="50" id="j7z-KK-ZOS"/>
-                            <constraint firstAttribute="width" secondItem="5Qz-HG-jkW" secondAttribute="height" multiplier="1:1" id="vot-Nj-wRn"/>
-                        </constraints>
                     </imageView>
                 </subviews>
             </view>
+            <constraints>
+                <constraint firstItem="5Qz-HG-jkW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="2wy-F6-M5Y"/>
+                <constraint firstAttribute="bottom" secondItem="5Qz-HG-jkW" secondAttribute="bottom" id="P4X-Bv-t7o"/>
+                <constraint firstAttribute="trailing" secondItem="5Qz-HG-jkW" secondAttribute="trailing" id="bx2-UN-mqO"/>
+                <constraint firstItem="5Qz-HG-jkW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="zb3-08-ZxL"/>
+            </constraints>
             <connections>
                 <outlet property="sumitImage" destination="5Qz-HG-jkW" id="bVJ-WB-Tl4"/>
             </connections>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="sumitlogo" width="134" height="162"/>
+    </resources>
 </document>
