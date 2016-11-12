@@ -11,7 +11,6 @@ import GoogleMaps
 
 class MapController: NSObject {
     
-    
     var mapVC: MapVC?
     var currentDestination: Destination?
     var destinations: [Destination]?
