@@ -24,6 +24,7 @@ class Destination: NSObject {
         marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         marker.title = title
         marker.snippet = "Salt Lake City"
+        marker.icon = UIImage(named: "sumitlogo.png")
         elevation = elev
         
     }

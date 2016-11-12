@@ -17,8 +17,8 @@ class MapVC: UIViewController, GMSMapViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        self.navigationController?.isNavigationBarHidden = true
+        
+        progUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,21 +34,38 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         mapView.isMyLocationEnabled = true
         mapView.settings.tiltGestures = false
         mapView.settings.rotateGestures = false
-        mapView.delegate = self
+        //mapView.delegate = self
+        mapView.mapType = kGMSTypeTerrain
+
         view = mapView
+    }
+    
+    // MARK: Interface
+    
+    func progUI() {
+        self.navigationController?.isNavigationBarHidden = true
+        view.backgroundColor = UIColor.white
         
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        marker.title = "Ensign Peak"
-        marker.snippet = "Salt Lake City"
-        marker.map = mapView
+        addDestinations(destinations: MapController.sharedInstance.destinations!)
+    }
+    
+    // MARK: Methods
+    
+    func addDestinations(destinations: [Destination]) {
+        
+        for dest in destinations {
+            
+            let marker = dest.marker
+            marker.map = view as! GMSMapView?
+
+            
+        }
     }
 
     // MARK: Google Maps Delegate
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        let mapController = MapController.sharedInstance
+        
         
         
         return true

@@ -26,7 +26,8 @@ class MapController: NSObject {
         // create the session
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let urlString : String = Network.apiURL()
+        let baseURL : String = Network.apiURL()
+        let urlString: String = "\(baseURL)destinations"
         
         // create url using url string
         guard let url = URL(string: urlString) else {
@@ -82,7 +83,7 @@ class MapController: NSObject {
                     
                     for destDict in rDestinations {
                         
-                        guard let id = destDict["destinationID"] as? Int else {
+                        guard let id = destDict["did"] as? Int else {
                             completion(false, nil)
                             print("Could not get from JSON")
                             return
@@ -112,14 +113,20 @@ class MapController: NSObject {
                             return
                         }
                         
+                        /*
                         guard let icon = destDict["icon"] as? String else {
                             completion(false, nil)
                             print("Could not get elevation from JSON")
                             return
                         }
+                        */
                         
                         let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation)
+                        
+                        destArray.append(destination)
                     }
+                    
+                    self.destinations = destArray
                     
                     completion(true, nil)
                     
