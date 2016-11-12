@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4712DAFF1DD7B284009E500F /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4712DAFD1DD7B284009E500F /* PhotoCell.swift */; };
+		4712DB001DD7B284009E500F /* PhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4712DAFE1DD7B284009E500F /* PhotoCell.xib */; };
 		471707571DD6C5EF0092546B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471707561DD6C5EF0092546B /* AppDelegate.swift */; };
 		4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4717075D1DD6C5EF0092546B /* Assets.xcassets */; };
 		471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4717075F1DD6C5EF0092546B /* LaunchScreen.storyboard */; };
@@ -37,6 +39,8 @@
 		47216BB61DD75EC70057A7AA /* LeaderboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47216BB41DD75EC70057A7AA /* LeaderboardVC.xib */; };
 		47216BBB1DD773440057A7AA /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BB91DD773440057A7AA /* CameraVC.swift */; };
 		47216BBC1DD773440057A7AA /* CameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47216BBA1DD773440057A7AA /* CameraVC.xib */; };
+		47216BBF1DD78D720057A7AA /* SumitPhotosVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BBD1DD78D720057A7AA /* SumitPhotosVC.swift */; };
+		47216BC01DD78D720057A7AA /* SumitPhotosVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47216BBE1DD78D720057A7AA /* SumitPhotosVC.xib */; };
 		47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DCF1DD6E2F8006BD38E /* MapController.swift */; };
 		47379DD21DD6E52B006BD38E /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DD11DD6E52B006BD38E /* Destination.swift */; };
 		476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CEEEB1DD6F91900B2BED2 /* Network.swift */; };
@@ -57,6 +61,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4712DAFD1DD7B284009E500F /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		4712DAFE1DD7B284009E500F /* PhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoCell.xib; sourceTree = "<group>"; };
 		471707531DD6C5EF0092546B /* Sumit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sumit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471707561DD6C5EF0092546B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4717075D1DD6C5EF0092546B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,6 +97,8 @@
 		47216BB41DD75EC70057A7AA /* LeaderboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardVC.xib; sourceTree = "<group>"; };
 		47216BB91DD773440057A7AA /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		47216BBA1DD773440057A7AA /* CameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraVC.xib; sourceTree = "<group>"; };
+		47216BBD1DD78D720057A7AA /* SumitPhotosVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumitPhotosVC.swift; sourceTree = "<group>"; };
+		47216BBE1DD78D720057A7AA /* SumitPhotosVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SumitPhotosVC.xib; sourceTree = "<group>"; };
 		47379DCF1DD6E2F8006BD38E /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		47379DD11DD6E52B006BD38E /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		476CEEEB1DD6F91900B2BED2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -161,6 +169,10 @@
 				47216BB11DD709F70057A7AA /* UserController.swift */,
 				471707761DD6C6410092546B /* CreateVC.swift */,
 				471707771DD6C6410092546B /* CreateVC.xib */,
+				47216BBD1DD78D720057A7AA /* SumitPhotosVC.swift */,
+				47216BBE1DD78D720057A7AA /* SumitPhotosVC.xib */,
+				4712DAFD1DD7B284009E500F /* PhotoCell.swift */,
+				4712DAFE1DD7B284009E500F /* PhotoCell.xib */,
 				47379DCF1DD6E2F8006BD38E /* MapController.swift */,
 				47379DD11DD6E52B006BD38E /* Destination.swift */,
 				471707A51DD6D5700092546B /* MapVC.swift */,
@@ -263,7 +275,7 @@
 				TargetAttributes = {
 					471707521DD6C5EF0092546B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = F98BU834UY;
+						DevelopmentTeam = L7MQU2ZUG5;
 						ProvisioningStyle = Automatic;
 					};
 					471707661DD6C5EF0092546B = {
@@ -302,8 +314,10 @@
 				471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */,
 				4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */,
 				471707791DD6C6410092546B /* CreateVC.xib in Resources */,
+				4712DB001DD7B284009E500F /* PhotoCell.xib in Resources */,
 				5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
+				47216BC01DD78D720057A7AA /* SumitPhotosVC.xib in Resources */,
 				55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */,
 				47216BBC1DD773440057A7AA /* CameraVC.xib in Resources */,
 			);
@@ -323,9 +337,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4712DAFF1DD7B284009E500F /* PhotoCell.swift in Sources */,
 				47216BB21DD709F70057A7AA /* UserController.swift in Sources */,
 				47379DD21DD6E52B006BD38E /* Destination.swift in Sources */,
 				5522AC021DD71F990080BD13 /* SumitCell.swift in Sources */,
+				47216BBF1DD78D720057A7AA /* SumitPhotosVC.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
@@ -464,7 +480,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F98BU834UY;
+				DEVELOPMENT_TEAM = L7MQU2ZUG5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -482,7 +498,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F98BU834UY;
+				DEVELOPMENT_TEAM = L7MQU2ZUG5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",

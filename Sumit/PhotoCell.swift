@@ -1,18 +1,18 @@
 //
-//  SumitCell.swift
+//  PhotoCell.swift
 //  Sumit
 //
-//  Created by Egan Anderson on 11/12/16.
+//  Created by Cole Wilkes on 11/12/16.
 //  Copyright © 2016 via cole. All rights reserved.
 //
 
 import UIKit
 
-class SumitCell: UICollectionViewCell {
-
-    @IBOutlet var sumitImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+class PhotoCell: UICollectionViewCell {
     
+    // MARK: Properties
+    @IBOutlet weak var sumitImageView: UIImageView!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

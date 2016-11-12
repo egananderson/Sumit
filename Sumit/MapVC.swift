@@ -113,8 +113,12 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
     }
     
     func showUserSumits() {
+        
+        let userController = UserController.sharedInstance
+        
         let mySumitsVC = MySumitVC()
         self.present(mySumitsVC, animated: true, completion: nil)
+
     }
     
     func showRecordSumit() {
