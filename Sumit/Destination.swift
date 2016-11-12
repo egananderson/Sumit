@@ -17,8 +17,9 @@ class Destination: NSObject {
     let elevation: Int
     let latitude: Double
     let longitude: Double
+    let score: Int
     
-    init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int) {
+    init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int, score: Int) {
 
         destinationID = id
         title = name
@@ -28,6 +29,7 @@ class Destination: NSObject {
         marker.snippet = "Salt Lake City"
         marker.icon = UIImage(named: "sumitlogo.png")
         elevation = elev
+        self.score = score
         self.latitude = latitude
         self.longitude = longitude
     }

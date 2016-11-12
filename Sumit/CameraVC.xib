@@ -6,11 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CameraVC" customModule="Sumit" customModuleProvider="target">
             <connections>
+                <outlet property="continueButton" destination="593-uq-uLo" id="b3M-Qd-7p2"/>
+                <outlet property="spinner" destination="cgb-no-Jcm" id="DH8-tf-trn"/>
+                <outlet property="textField" destination="Aka-Sm-WGP" id="X95-rc-A3z"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,11 +22,45 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="TextField" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-Sm-WGP">
+                    <rect key="frame" x="67" y="269" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="1WK-gP-fVX"/>
+                        <constraint firstAttribute="height" constant="128" id="TBB-jn-h2F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="cgb-no-Jcm">
+                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                </activityIndicatorView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="593-uq-uLo">
+                    <rect key="frame" x="156" y="405" width="62" height="30"/>
+                    <state key="normal" title="Continue">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="continueButtonPressed:" destination="-1" eventType="touchUpInside" id="Jaf-Jt-3ZU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.074509803921568626" green="0.60392156862745094" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
             <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="593-uq-uLo" firstAttribute="top" secondItem="Aka-Sm-WGP" secondAttribute="bottom" constant="10" id="R8I-FR-0uy"/>
+                <constraint firstItem="cgb-no-Jcm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Vw2-mU-vIQ"/>
+                <constraint firstItem="Aka-Sm-WGP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="bEz-kT-1Oy"/>
+                <constraint firstItem="593-uq-uLo" firstAttribute="centerX" secondItem="Aka-Sm-WGP" secondAttribute="centerX" id="d22-td-jQt"/>
+                <constraint firstItem="cgb-no-Jcm" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eNk-hw-Zof"/>
+                <constraint firstItem="cgb-no-Jcm" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="20:667" id="ge3-yA-T3Q"/>
+                <constraint firstItem="Aka-Sm-WGP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="uVX-W0-IuD"/>
+            </constraints>
             <connections>
                 <outletCollection property="gestureRecognizers" destination="NoV-4O-7v4" appends="YES" id="VKd-Ea-naQ"/>
             </connections>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
         </view>
         <swipeGestureRecognizer direction="down" id="NoV-4O-7v4">
             <connections>

@@ -113,6 +113,12 @@ class MapController: NSObject {
                             return
                         }
                         
+                        guard let score = destDict["points"] as? Int else {
+                            completion(false, nil)
+                            print("Could not get score from JSON")
+                            return
+                        }
+                        
                         /*
                         guard let icon = destDict["icon"] as? String else {
                             completion(false, nil)
@@ -121,7 +127,7 @@ class MapController: NSObject {
                         }
                         */
                         
-                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation)
+                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score)
                         
                         destArray.append(destination)
                     }
