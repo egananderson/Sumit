@@ -30,6 +30,8 @@
 		4717079C1DD6D1BE0092546B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079B1DD6D1BE0092546B /* QuartzCore.framework */; };
 		4717079E1DD6D1C30092546B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079D1DD6D1C30092546B /* SystemConfiguration.framework */; };
 		471707A01DD6D1CA0092546B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079F1DD6D1CA0092546B /* UIKit.framework */; };
+		55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */; };
+		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		4717079B1DD6D1BE0092546B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4717079D1DD6D1C30092546B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4717079F1DD6D1CA0092546B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySumitVC.swift; path = ../MySumitVC.swift; sourceTree = "<group>"; };
+		55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySumitVC.xib; path = ../MySumitVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,8 @@
 				471707561DD6C5EF0092546B /* AppDelegate.swift */,
 				471707761DD6C6410092546B /* CreateVC.swift */,
 				471707771DD6C6410092546B /* CreateVC.xib */,
+				55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */,
+				55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */,
 				4717075D1DD6C5EF0092546B /* Assets.xcassets */,
 				4717075F1DD6C5EF0092546B /* LaunchScreen.storyboard */,
 				471707621DD6C5EF0092546B /* Info.plist */,
@@ -221,7 +227,7 @@
 				TargetAttributes = {
 					471707521DD6C5EF0092546B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L7MQU2ZUG5;
+						DevelopmentTeam = F98BU834UY;
 						ProvisioningStyle = Automatic;
 					};
 					471707661DD6C5EF0092546B = {
@@ -260,6 +266,7 @@
 				4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */,
 				471707791DD6C6410092546B /* CreateVC.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
+				55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +286,7 @@
 			files = (
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
 				471707571DD6C5EF0092546B /* AppDelegate.swift in Sources */,
+				55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +416,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -426,7 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -489,6 +497,7 @@
 				471707721DD6C5EF0092546B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		471707731DD6C5EF0092546B /* Build configuration list for PBXNativeTarget "SumitTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +506,7 @@
 				471707751DD6C5EF0092546B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
