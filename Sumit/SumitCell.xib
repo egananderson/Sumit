@@ -35,6 +35,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="sumitlogo" width="134" height="162"/>
+        <image name="sumitlogo" width="66" height="80"/>
     </resources>
 </document>

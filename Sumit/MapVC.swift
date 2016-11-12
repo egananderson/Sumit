@@ -47,6 +47,10 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         view.backgroundColor = UIColor.white
         
         addDestinations(destinations: MapController.sharedInstance.destinations!)
+        
+        let header = getHeaderView()
+        
+        view.addSubview(header)
     }
     
     // MARK: Methods
@@ -61,13 +65,57 @@ class MapVC: UIViewController, GMSMapViewDelegate {
             
         }
     }
+    
+    func getHeaderView() -> UIView {
+        
+        let width = UIScreen.main.bounds.width
+        let height = UIScreen.main.bounds.height
+        // make header container
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: width, height: 80))
+        headerView.backgroundColor = UIColor(colorLiteralRed: 19/255, green: 154/255, blue: 228/255, alpha: 1.0)
+        
+        let leaderButton = UIButton(frame: CGRect(x: 0 , y: 5, width: width/2, height: headerView.frame.height - 5))
+        leaderButton.addTarget(self, action: #selector(showLeaderboard), for: .touchUpInside)
+        leaderButton.setTitle("Leaderboard", for: .normal)
+        leaderButton.setTitleColor(UIColor.white, for: .normal)
+        leaderButton.titleLabel?.font = UIFont(name: "System", size: 22)
+        leaderButton.titleLabel?.textAlignment = .center
+        
+        let sumitButton = UIButton(frame: CGRect(x: width/2 , y: 5, width: width/2, height: headerView.frame.height - 5))
+        sumitButton.addTarget(self, action: #selector(showLeaderboard), for: .touchUpInside)
+        sumitButton.setTitle("My Sumits", for: .normal)
+        sumitButton.setTitleColor(UIColor.white, for: .normal)
+        sumitButton.titleLabel?.font = UIFont(name: "System", size: 22)
+        sumitButton.titleLabel?.textAlignment = .center
+        
+        headerView.addSubview(leaderButton)
+        headerView.addSubview(sumitButton)
+        
+        return headerView
+    }
+    
+    // MARK: Action
+    
+    func showLeaderboard() {
+        let leaderVC = LeaderboardVC()
+        self.present(leaderVC, animated: true, completion: nil)
+    }
+    
+    func showUserSumits() {
+        let mySumitsVC = MySumitVC()
+        self.present(mySumitsVC, animated: true, completion: nil)
+    }
 
     // MARK: Google Maps Delegate
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         
-        
-        
         return true
+    }
+    
+    // MARK: Transition
+    
+    func leftToRight() {
+        
     }
 }
