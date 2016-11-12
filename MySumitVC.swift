@@ -21,13 +21,6 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager = CLLocationManager();
-        locationManager.delegate = self
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.distanceFilter = kCLDistanceFilterNone;
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-        locationManager.startUpdatingLocation();
-        
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         
@@ -50,8 +43,25 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     }
 
     @IBAction func sumitButtonTapped(_ sender: UIButton) {
-        print("latitude = \(locationManager.location!.coordinate.latitude)")
-        print("longitude = \(locationManager.location!.coordinate.longitude)")
+        locationManager = CLLocationManager();
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.distanceFilter = kCLDistanceFilterNone;
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        locationManager.startUpdatingLocation();
+        
+        let mapController = MapController.sharedInstance
+        
+        if let latitude = locationManager.location?.coordinate.latitude {
+            let longitude = locationManager.location!.coordinate.longitude
+            print("latitude = \(latitude)")
+            print("longitude = \(longitude)")
+            if let destination = mapController.findDestination(latitude: latitude, longitude: longitude) {
+                print(destination.title)
+            } else {
+                print("no destination")
+            }
+        }
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {

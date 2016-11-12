@@ -36,7 +36,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 } else {
                     DispatchQueue.main.async(execute: { 
                         //mapController.mapVC?.addDestinations(destinations: mapController.destinations!)
-                        rootVC = mapController.mapVC
+//                        rootVC = mapController.mapVC
+                        rootVC = MySumitVC()
                         self.window?.rootViewController = UINavigationController(rootViewController: rootVC!)
                     })
                 }

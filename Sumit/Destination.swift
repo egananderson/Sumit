@@ -15,6 +15,8 @@ class Destination: NSObject {
     let title: String
     let marker: GMSMarker
     let elevation: Int
+    let latitude: Double
+    let longitude: Double
     
     init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int) {
 
@@ -26,6 +28,7 @@ class Destination: NSObject {
         marker.snippet = "Salt Lake City"
         marker.icon = UIImage(named: "sumitlogo.png")
         elevation = elev
-        
+        self.latitude = latitude
+        self.longitude = longitude
     }
 }
