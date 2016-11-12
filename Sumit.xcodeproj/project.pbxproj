@@ -30,6 +30,11 @@
 		4717079C1DD6D1BE0092546B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079B1DD6D1BE0092546B /* QuartzCore.framework */; };
 		4717079E1DD6D1C30092546B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079D1DD6D1C30092546B /* SystemConfiguration.framework */; };
 		471707A01DD6D1CA0092546B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079F1DD6D1CA0092546B /* UIKit.framework */; };
+		471707A71DD6D5700092546B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471707A51DD6D5700092546B /* MapVC.swift */; };
+		471707A81DD6D5700092546B /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471707A61DD6D5700092546B /* MapVC.xib */; };
+		47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DCF1DD6E2F8006BD38E /* MapController.swift */; };
+		47379DD21DD6E52B006BD38E /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DD11DD6E52B006BD38E /* Destination.swift */; };
+		476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CEEEB1DD6F91900B2BED2 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +75,11 @@
 		4717079B1DD6D1BE0092546B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4717079D1DD6D1C30092546B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4717079F1DD6D1CA0092546B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		471707A51DD6D5700092546B /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		471707A61DD6D5700092546B /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		47379DCF1DD6E2F8006BD38E /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
+		47379DD11DD6E52B006BD38E /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		476CEEEB1DD6F91900B2BED2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +141,11 @@
 				471707561DD6C5EF0092546B /* AppDelegate.swift */,
 				471707761DD6C6410092546B /* CreateVC.swift */,
 				471707771DD6C6410092546B /* CreateVC.xib */,
+				47379DCF1DD6E2F8006BD38E /* MapController.swift */,
+				47379DD11DD6E52B006BD38E /* Destination.swift */,
+				471707A51DD6D5700092546B /* MapVC.swift */,
+				471707A61DD6D5700092546B /* MapVC.xib */,
+				476CEEEB1DD6F91900B2BED2 /* Network.swift */,
 				4717075D1DD6C5EF0092546B /* Assets.xcassets */,
 				4717075F1DD6C5EF0092546B /* LaunchScreen.storyboard */,
 				471707621DD6C5EF0092546B /* Info.plist */,
@@ -259,6 +274,7 @@
 				471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */,
 				4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */,
 				471707791DD6C6410092546B /* CreateVC.xib in Resources */,
+				471707A81DD6D5700092546B /* MapVC.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,7 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47379DD21DD6E52B006BD38E /* Destination.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
+				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
+				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
+				47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */,
 				471707571DD6C5EF0092546B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +509,7 @@
 				471707721DD6C5EF0092546B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		471707731DD6C5EF0092546B /* Build configuration list for PBXNativeTarget "SumitTests" */ = {
 			isa = XCConfigurationList;
@@ -497,6 +518,7 @@
 				471707751DD6C5EF0092546B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
