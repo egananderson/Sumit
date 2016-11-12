@@ -143,4 +143,24 @@ class MapController: NSObject {
         
         dataTask.resume()
     }
+    
+    func findDestination(latitude: Double, longitude: Double) -> Destination? {
+        for destination in destinations! {
+            let radius: Double = 6371 //radius of earth in km
+            let lat1 = latitude
+            let lat2 = destination.latitude
+            let lon1 = longitude
+            let lon2 = destination.longitude
+            let dLat = (lat2 - lat1) * .pi / 180
+            let dLon = (lon2 - lon1) * .pi / 180
+            let a = sin(dLat / 2) * sin(dLat / 2) + cos(lat1 * .pi / 180) * cos(lat2 * .pi / 180) * sin(dLon / 2) * sin(dLon / 2)
+            let c = 2 * asin(sqrt(a))
+            let km = radius * c
+            let meter = km * 1000.0
+            if(meter < 50){
+                return destination
+            }
+        }
+        return nil
+    }
 }
