@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyDSSMfuFX2ly2Qf1A0MaHawZ5Gc-L7w3Yw")
         
-        let rootVC = MapVC()
+        let rootVC = MySumitVC()
         
         self.window?.rootViewController = UINavigationController(rootViewController: rootVC)
         

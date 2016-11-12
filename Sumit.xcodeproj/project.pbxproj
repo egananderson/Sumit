@@ -32,12 +32,13 @@
 		471707A01DD6D1CA0092546B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4717079F1DD6D1CA0092546B /* UIKit.framework */; };
 		471707A71DD6D5700092546B /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471707A51DD6D5700092546B /* MapVC.swift */; };
 		471707A81DD6D5700092546B /* MapVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471707A61DD6D5700092546B /* MapVC.xib */; };
+		47216BB01DD709E40057A7AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BAF1DD709E40057A7AA /* User.swift */; };
+		47216BB21DD709F70057A7AA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BB11DD709F70057A7AA /* UserController.swift */; };
 		47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DCF1DD6E2F8006BD38E /* MapController.swift */; };
 		47379DD21DD6E52B006BD38E /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DD11DD6E52B006BD38E /* Destination.swift */; };
 		476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CEEEB1DD6F91900B2BED2 /* Network.swift */; };
 		55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */; };
 		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		4717079F1DD6D1CA0092546B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		471707A51DD6D5700092546B /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		471707A61DD6D5700092546B /* MapVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapVC.xib; sourceTree = "<group>"; };
+		47216BAF1DD709E40057A7AA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		47216BB11DD709F70057A7AA /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		47379DCF1DD6E2F8006BD38E /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		47379DD11DD6E52B006BD38E /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		476CEEEB1DD6F91900B2BED2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				471707561DD6C5EF0092546B /* AppDelegate.swift */,
+				47216BAF1DD709E40057A7AA /* User.swift */,
+				47216BB11DD709F70057A7AA /* UserController.swift */,
 				471707761DD6C6410092546B /* CreateVC.swift */,
 				471707771DD6C6410092546B /* CreateVC.xib */,
 				47379DCF1DD6E2F8006BD38E /* MapController.swift */,
@@ -243,7 +248,7 @@
 				TargetAttributes = {
 					471707521DD6C5EF0092546B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = F98BU834UY;
+						DevelopmentTeam = L7MQU2ZUG5;
 						ProvisioningStyle = Automatic;
 					};
 					471707661DD6C5EF0092546B = {
@@ -301,10 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47216BB21DD709F70057A7AA /* UserController.swift in Sources */,
 				47379DD21DD6E52B006BD38E /* Destination.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
+				47216BB01DD709E40057A7AA /* User.swift in Sources */,
 				47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */,
 				471707571DD6C5EF0092546B /* AppDelegate.swift in Sources */,
 				55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */,
@@ -437,7 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F98BU834UY;
+				DEVELOPMENT_TEAM = L7MQU2ZUG5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -455,7 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = F98BU834UY;
+				DEVELOPMENT_TEAM = L7MQU2ZUG5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
