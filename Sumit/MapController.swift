@@ -164,7 +164,7 @@ class MapController: NSObject {
                 let c = 2 * asin(sqrt(a))
                 let km = radius * c
                 let meter = km * 1000.0
-                if(meter < 50){
+                if(meter < 100){
                     self.currentDestination = destination
                     return destination
                 }
