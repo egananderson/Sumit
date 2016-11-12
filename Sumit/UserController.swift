@@ -19,6 +19,7 @@ class UserController: NSObject {
     var sumits: [Destination]?
     var photoUrl: String?
     var recentSumit: Destination?
+    var currentSumit: Destination?
     
     // the singleton for our person controller
     static let sharedInstance = UserController()
@@ -129,6 +130,14 @@ class UserController: NSObject {
             
             let user = User(id: userID, user: username!, score: score)
             currentUser = user
+            
+            self.selectSumits(completion: { (success, error) in
+                if !success {
+                    print("unable to select sumits")
+                } else {
+                    
+                }
+            })
         }
     }
     
@@ -163,7 +172,7 @@ class UserController: NSObject {
             // check length of response data
             guard (data?.count)! > 0 else {
                 completion(false, nil)
-                print("response was empty mapController->selectDestinations")
+                print("response was empty userController->selectSumits")
                 return
             }
             

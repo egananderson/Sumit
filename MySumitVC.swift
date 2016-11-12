@@ -10,7 +10,6 @@ import UIKit
 import CoreLocation
 
 class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    @IBOutlet var sumitButton: UIButton!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
@@ -30,8 +29,11 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         
         let userController = UserController.sharedInstance
         usernameLabel.text = userController.currentUser?.username
+        usernameLabel.sizeToFit()
+        
         let score = String(describing: userController.currentUser!.score)
         scoreLabel.text = "sum: \(score)"
+        scoreLabel.sizeToFit()
         
         self.navigationController?.navigationBar.isHidden = true
         
@@ -89,7 +91,7 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         
         let spacing: CGFloat = 3.0
         
-        let width: CGFloat = (screenWidth / 4) - spacing
+        let width: CGFloat = (screenWidth / 3.8)
         
         let size = CGSize(width: width, height: width)
         
@@ -139,6 +141,20 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         
         
         return cell
+    }
+    
+    // MARK: CollectionViewDelegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let index = indexPath.row
+        
+        let sumit = UserController.sharedInstance.sumits?[index]
+        UserController.sharedInstance.currentSumit = sumit
+        
+        let sumitPhotosVC = SumitPhotosVC()
+        sumitPhotosVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(sumitPhotosVC, animated: true, completion: nil)
     }
 
     // MARK: Actions
