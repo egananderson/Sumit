@@ -17,6 +17,8 @@ class UserController: NSObject {
     
     var currentUser: User?
     var sumits: [Destination]?
+    var photoUrl: String?
+    var recentSumit: Destination?
     
     // the singleton for our person controller
     static let sharedInstance = UserController()
@@ -223,6 +225,13 @@ class UserController: NSObject {
                             return
                         }
                         
+                        guard let score = sumit["points"] as? Int else {
+                            completion(false, nil)
+                            print("Could not get score from JSON")
+                            return
+                        }
+
+                        
                         /*
                          guard let icon = destDict["icon"] as? String else {
                          completion(false, nil)
@@ -231,7 +240,7 @@ class UserController: NSObject {
                          }
                          */
                         
-                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation)
+                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score)
                         
                         sumitArray.append(destination)
                     }
@@ -404,7 +413,7 @@ class UserController: NSObject {
         }
         
         var request = URLRequest(url: url)
-        request.httpMethod = "PUT"
+        request.httpMethod = "POST"
         
         let uid = UserController.sharedInstance.currentUser?.userID
         let did = MapController.sharedInstance.currentDestination
@@ -433,7 +442,7 @@ class UserController: NSObject {
             // parse the result as JSON, since that's what the API provides
             do {
                 guard let responseDict = try JSONSerialization.jsonObject(with: data!,
-                                                                          options: []) as? [String: AnyObject] else {
+                                                                          options: []) as? [String: Any] else {
                                                                             completion(false, nil)
                                                                             print("Could not get JSON from responseData as dictionary")
                                                                             return
@@ -445,10 +454,17 @@ class UserController: NSObject {
                     return
                 }
                 
+                guard let destination = responseDict["destination"] as? Destination else {
+                    completion(false, nil)
+                    print("No return code")
+                    return
+                }
+                
                 // good code
                 if statusCode == 0 {
                     // phone has been verified
-                    
+                    self.sumits?.append(destination)
+                    self.recentSumit = destination
                     completion(true, nil)
                     
                 } else {
