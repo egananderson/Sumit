@@ -35,6 +35,8 @@
 		47216BB21DD709F70057A7AA /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BB11DD709F70057A7AA /* UserController.swift */; };
 		47216BB51DD75EC70057A7AA /* LeaderboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BB31DD75EC70057A7AA /* LeaderboardVC.swift */; };
 		47216BB61DD75EC70057A7AA /* LeaderboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47216BB41DD75EC70057A7AA /* LeaderboardVC.xib */; };
+		47216BBB1DD773440057A7AA /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47216BB91DD773440057A7AA /* CameraVC.swift */; };
+		47216BBC1DD773440057A7AA /* CameraVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47216BBA1DD773440057A7AA /* CameraVC.xib */; };
 		47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DCF1DD6E2F8006BD38E /* MapController.swift */; };
 		47379DD21DD6E52B006BD38E /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DD11DD6E52B006BD38E /* Destination.swift */; };
 		476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CEEEB1DD6F91900B2BED2 /* Network.swift */; };
@@ -87,6 +89,8 @@
 		47216BB11DD709F70057A7AA /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		47216BB31DD75EC70057A7AA /* LeaderboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeaderboardVC.swift; sourceTree = "<group>"; };
 		47216BB41DD75EC70057A7AA /* LeaderboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeaderboardVC.xib; sourceTree = "<group>"; };
+		47216BB91DD773440057A7AA /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		47216BBA1DD773440057A7AA /* CameraVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraVC.xib; sourceTree = "<group>"; };
 		47379DCF1DD6E2F8006BD38E /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		47379DD11DD6E52B006BD38E /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		476CEEEB1DD6F91900B2BED2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 				476CEEEB1DD6F91900B2BED2 /* Network.swift */,
 				55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */,
 				55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */,
+				47216BB91DD773440057A7AA /* CameraVC.swift */,
+				47216BBA1DD773440057A7AA /* CameraVC.xib */,
 				5522AC001DD71F990080BD13 /* SumitCell.swift */,
 				5522AC011DD71F990080BD13 /* SumitCell.xib */,
 				47216BB31DD75EC70057A7AA /* LeaderboardVC.swift */,
@@ -299,6 +305,7 @@
 				5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
 				55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */,
+				47216BBC1DD773440057A7AA /* CameraVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +330,7 @@
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
 				47216BB01DD709E40057A7AA /* User.swift in Sources */,
+				47216BBB1DD773440057A7AA /* CameraVC.swift in Sources */,
 				47216BB51DD75EC70057A7AA /* LeaderboardVC.swift in Sources */,
 				47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */,
 				471707571DD6C5EF0092546B /* AppDelegate.swift in Sources */,

@@ -158,6 +158,7 @@ class MapController: NSObject {
             let km = radius * c
             let meter = km * 1000.0
             if(meter < 50){
+                self.currentDestination = destination
                 return destination
             }
         }
