@@ -248,12 +248,12 @@
 				TargetAttributes = {
 					471707521DD6C5EF0092546B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L7MQU2ZUG5;
+						DevelopmentTeam = F98BU834UY;
 						ProvisioningStyle = Automatic;
 					};
 					471707661DD6C5EF0092546B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L7MQU2ZUG5;
+						DevelopmentTeam = F98BU834UY;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 471707521DD6C5EF0092546B;
 					};
@@ -444,7 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -462,7 +462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -481,7 +481,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
 				INFOPLIST_FILE = SumitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viacole.SumitTests;
@@ -496,7 +496,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
 				INFOPLIST_FILE = SumitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viacole.SumitTests;
