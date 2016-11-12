@@ -129,7 +129,6 @@ class UserController: NSObject {
                 if !success {
                     print("unable to select sumits")
                 } else {
-                    
                 }
             })
         }

@@ -47,7 +47,9 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        let title: String = (UserController.sharedInstance.currentSumit?.title)!
         
+        titleLabel.text = title
     }
     
     // MARK: UICollectionViewDelegate
@@ -116,7 +118,7 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         let did = UserController.sharedInstance.currentSumit?.destinationID
         
         let baseURL : String = Network.apiURL()
-        let urlString: String = "\(baseURL)photos_by_did?=\(did!)"
+        let urlString: String = "\(baseURL)photos_by_did?did=\(did!)"
         
         // create url using url string
         guard let url = URL(string: urlString) else {
@@ -162,7 +164,7 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                 
                 // good code
                 if statusCode == 0 {
-                    guard let rPhotos = responseDict["photo_urls"] as? [String:Any] else {
+                    guard let rPhotos = responseDict["photo_urls"] as? [String] else {
                         completion(false, nil)
                         print("Could not get array of destinations from search")
                         return
@@ -170,15 +172,9 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
                     
                     var photoArray = [UIImage]()
                     
-                    for photo in rPhotos {
+                    for photoName in rPhotos {
                         
-                        guard let url = rPhotos["photo_url"] as? String else {
-                            completion(false, nil)
-                            print("Could not get photo")
-                            return
-                        }
-                        
-                        let imageData = try? Data(contentsOf: NSURL(string: url) as! URL)
+                        let imageData = try? Data(contentsOf: NSURL(string: photoName) as! URL)
                         
                         let image = UIImage(data: imageData!)!
                         
