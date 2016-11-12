@@ -88,13 +88,7 @@ class UserController: NSObject {
                         return
                     }
                     
-                    guard let score = responseDict["score"] as? Int else {
-                        completion(false, nil)
-                        print("Could not get score")
-                        return
-                    }
-                    
-                    let user = User(id: userID, user: username, score: score)
+                    let user = User(id: userID, user: username, score: 0)
                     self.currentUser = user
                     self.saveUserLocal()
                     
@@ -361,7 +355,7 @@ class UserController: NSObject {
                 // good code
                 if statusCode == 0 {
                     
-                    guard let url = responseDict["photo_url"] as? String else {
+                    guard let photoUrl = responseDict["photo_url"] as? String else {
                         completion(false, nil)
                         print("No return code")
                         return
@@ -371,7 +365,7 @@ class UserController: NSObject {
                     
                     photoGroup.enter()
                     
-                    self.createSumit(url: url, completion: { (success, error) in
+                    self.createSumit(photoUrl: photoUrl, completion: { (success, error) in
                         if !success {
                             print("bad create sumit")
                             completion(false, error)
@@ -398,7 +392,7 @@ class UserController: NSObject {
         dataTask.resume()
     }
     
-    func createSumit(url: String, completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
+    func createSumit(photoUrl: String, completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
     
         // create the session
         let session = URLSession(configuration: URLSessionConfiguration.default)
@@ -416,10 +410,12 @@ class UserController: NSObject {
         request.httpMethod = "POST"
         
         let uid = UserController.sharedInstance.currentUser?.userID
-        let did = MapController.sharedInstance.currentDestination
+        let did = MapController.sharedInstance.currentDestination?.destinationID
         let timestamp = self.timestampString()
         
-        let params = "uid=\(uid)&did=\(did)&url=\(url)&timestamp=\(timestamp)"
+        print(timestamp)
+        
+        let params = "uid=\(uid!)&did=\(did!)&photo_url=\(photoUrl)&time=\(timestamp)"
         let postData = params.data(using: String.Encoding.utf8)
         request.httpBody = postData
         
@@ -454,7 +450,7 @@ class UserController: NSObject {
                     return
                 }
                 
-                guard let destination = responseDict["destination"] as? Destination else {
+                guard let destinationDict = responseDict["destination"] as? NSDictionary else {
                     completion(false, nil)
                     print("No return code")
                     return
@@ -463,6 +459,7 @@ class UserController: NSObject {
                 // good code
                 if statusCode == 0 {
                     // phone has been verified
+                    let destination = Destination(id: destinationDict["did"] as! Int, name: destinationDict["name"] as! String, latitude: destinationDict["latitude"] as! Double, longitude: destinationDict["longitude"] as! Double, elev: destinationDict["elevation"] as! Int, score: destinationDict["points"] as! Int)
                     self.sumits?.append(destination)
                     self.recentSumit = destination
                     completion(true, nil)
@@ -530,7 +527,7 @@ class UserController: NSObject {
         let minute = components.minute
         let second = components.second
         
-        let timestamp = "\(year)-\(month)-\(day) \(hour):\(minute):\(second)"
+        let timestamp = "\(year!)-\(month!)-\(day!) \(hour!):\(minute!):\(second!)"
         
         return timestamp
     }

@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyDSSMfuFX2ly2Qf1A0MaHawZ5Gc-L7w3Yw")
     
         let userController = UserController.sharedInstance
+     //   userController.logout()
         userController.loadUserLocal()
         
         var rootVC: UIViewController?

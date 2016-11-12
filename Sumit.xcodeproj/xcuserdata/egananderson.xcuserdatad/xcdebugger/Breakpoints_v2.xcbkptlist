@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sumit/CameraVC.swift"
-            timestampString = "500669004.637857"
+            filePath = "Sumit/UserController.swift"
+            timestampString = "500676569.750563"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "462"
+            endingLineNumber = "462"
+            landmarkName = "createSumit(photoUrl:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sumit/CameraVC.swift"
-            timestampString = "500669391.330225"
+            filePath = "Sumit/UserController.swift"
+            timestampString = "500676640.169277"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "460"
+            endingLineNumber = "460"
+            landmarkName = "createSumit(photoUrl:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Sumit/CameraVC.swift"
-            timestampString = "500669397.386471"
+            filePath = "Sumit/UserController.swift"
+            timestampString = "500676774.508961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "imagePickerController(_:didFinishPickingMediaWithInfo:)"
+            startingLineNumber = "453"
+            endingLineNumber = "453"
+            landmarkName = "createSumit(photoUrl:completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

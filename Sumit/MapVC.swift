@@ -50,7 +50,9 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         self.navigationController?.isNavigationBarHidden = true
         view.backgroundColor = UIColor.white
         
-        addDestinations(destinations: MapController.sharedInstance.destinations!)
+        if let destinations = MapController.sharedInstance.destinations {
+            addDestinations(destinations: destinations)
+        }
         
         let header = getHeaderView()
         

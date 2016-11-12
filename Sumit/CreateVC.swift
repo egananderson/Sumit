@@ -47,8 +47,8 @@ class CreateVC: UIViewController, UITextFieldDelegate {
                 print("error createPressed")
             } else {
                 DispatchQueue.main.async(execute: {
-                    let mySumitVC = MySumitVC()
-                    self.navigationController?.pushViewController(mySumitVC, animated: true)
+                    let mapVC = MapController.sharedInstance.mapVC
+                    self.navigationController?.pushViewController(mapVC!, animated: true)
                 })
             }
         }

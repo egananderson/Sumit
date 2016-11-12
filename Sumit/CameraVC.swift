@@ -83,7 +83,7 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func continueButtonPressed(_ sender: Any) {
