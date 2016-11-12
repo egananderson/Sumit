@@ -121,6 +121,12 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         return cell
     }
 
+    // MARK: Actions
+    
+    @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
     
     /*
     // MARK: - Navigation

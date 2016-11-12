@@ -18,6 +18,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.isNavigationBarHidden = true
         progUI()
     }
 
@@ -82,7 +83,7 @@ class MapVC: UIViewController, GMSMapViewDelegate {
         leaderButton.titleLabel?.textAlignment = .center
         
         let sumitButton = UIButton(frame: CGRect(x: width/2 , y: 5, width: width/2, height: headerView.frame.height - 5))
-        sumitButton.addTarget(self, action: #selector(showLeaderboard), for: .touchUpInside)
+        sumitButton.addTarget(self, action: #selector(showUserSumits), for: .touchUpInside)
         sumitButton.setTitle("My Sumits", for: .normal)
         sumitButton.setTitleColor(UIColor.white, for: .normal)
         sumitButton.titleLabel?.font = UIFont(name: "System", size: 22)

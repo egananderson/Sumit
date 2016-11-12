@@ -51,7 +51,7 @@
                             </constraints>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgc-oW-x9U">
-                            <rect key="frame" x="185" y="39" width="44.5" height="23"/>
+                            <rect key="frame" x="185" y="39" width="45" height="23"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -82,6 +82,7 @@
                 </collectionView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
             <constraints>
                 <constraint firstItem="fwq-GE-3Ka" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="0uI-R1-de4"/>
                 <constraint firstAttribute="trailing" secondItem="a26-xc-aQc" secondAttribute="trailing" constant="35" id="7ys-r7-Okc"/>
@@ -93,8 +94,16 @@
                 <constraint firstItem="a26-xc-aQc" firstAttribute="top" secondItem="fwq-GE-3Ka" secondAttribute="bottom" constant="12" id="mbk-um-U1y"/>
                 <constraint firstItem="a26-xc-aQc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="35" id="n38-8n-YxN"/>
             </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="tAI-RV-abj" appends="YES" id="q50-Ad-Ub5"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
+        <swipeGestureRecognizer direction="down" id="tAI-RV-abj">
+            <connections>
+                <action selector="swipeDown:" destination="-1" id="mE3-oX-aks"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
     <resources>
         <image name="sumitfulltext" width="729" height="411"/>
