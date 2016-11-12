@@ -37,6 +37,8 @@
 		47379DD01DD6E2F8006BD38E /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DCF1DD6E2F8006BD38E /* MapController.swift */; };
 		47379DD21DD6E52B006BD38E /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47379DD11DD6E52B006BD38E /* Destination.swift */; };
 		476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476CEEEB1DD6F91900B2BED2 /* Network.swift */; };
+		5522AC021DD71F990080BD13 /* SumitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522AC001DD71F990080BD13 /* SumitCell.swift */; };
+		5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AC011DD71F990080BD13 /* SumitCell.xib */; };
 		55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */; };
 		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
 /* End PBXBuildFile section */
@@ -86,6 +88,8 @@
 		47379DCF1DD6E2F8006BD38E /* MapController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		47379DD11DD6E52B006BD38E /* Destination.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		476CEEEB1DD6F91900B2BED2 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		5522AC001DD71F990080BD13 /* SumitCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumitCell.swift; sourceTree = "<group>"; };
+		5522AC011DD71F990080BD13 /* SumitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SumitCell.xib; sourceTree = "<group>"; };
 		55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySumitVC.swift; path = ../MySumitVC.swift; sourceTree = "<group>"; };
 		55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySumitVC.xib; path = ../MySumitVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,6 +162,8 @@
 				476CEEEB1DD6F91900B2BED2 /* Network.swift */,
 				55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */,
 				55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */,
+				5522AC001DD71F990080BD13 /* SumitCell.swift */,
+				5522AC011DD71F990080BD13 /* SumitCell.xib */,
 				4717075D1DD6C5EF0092546B /* Assets.xcassets */,
 				4717075F1DD6C5EF0092546B /* LaunchScreen.storyboard */,
 				471707621DD6C5EF0092546B /* Info.plist */,
@@ -286,6 +292,7 @@
 				471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */,
 				4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */,
 				471707791DD6C6410092546B /* CreateVC.xib in Resources */,
+				5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */,
 				471707A81DD6D5700092546B /* MapVC.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
 				55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */,
@@ -308,6 +315,7 @@
 			files = (
 				47216BB21DD709F70057A7AA /* UserController.swift in Sources */,
 				47379DD21DD6E52B006BD38E /* Destination.swift in Sources */,
+				5522AC021DD71F990080BD13 /* SumitCell.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
