@@ -11,6 +11,7 @@ import UIKit
 class SumitCell: UICollectionViewCell {
 
     @IBOutlet var sumitImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

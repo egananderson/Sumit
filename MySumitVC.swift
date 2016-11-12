@@ -14,24 +14,24 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
-    
+    var sumits: [Destination]?
     
     var locationManager: CLLocationManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
-        
         let nib = UINib(nibName: "SumitCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "sumitCell")
         
+        self.collectionView.dataSource = self
+        self.collectionView.delegate = self
+        
+        
         let userController = UserController.sharedInstance
         usernameLabel.text = userController.currentUser?.username
-        usernameLabel.font = usernameLabel.font.withSize(30)
-        scoreLabel.text = String(describing: userController.currentUser!.score)
-        scoreLabel.font = scoreLabel.font.withSize(30)
+        let score = String(describing: userController.currentUser!.score)
+        scoreLabel.text = "sum: \(score)"
         
         self.navigationController?.navigationBar.isHidden = true
         
@@ -47,6 +47,7 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     func progUI() {
         
     }
+    
     @IBAction func sumitButtonTapped(_ sender: UIButton) {
         locationManager = CLLocationManager();
         locationManager.delegate = self
@@ -113,15 +114,29 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     // MARK: UICollectionViewDatasource methods
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        let userController = UserController.sharedInstance
         
-        return 5;
+        if userController.sumits == nil {
+            return 0
+        } else {
+            return (userController.sumits?.count)!
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cellID = "sumitCell"
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! SumitCell
         
-//        cell.imageView.image = 
+        let userController = UserController.sharedInstance
+        
+        if let sumit = userController.sumits?[indexPath.row] {
+            cell.sumitImage.image = sumit.marker.icon
+            cell.titleLabel.text = sumit.title
+        }
+        
+        
+        
         
         return cell
     }
