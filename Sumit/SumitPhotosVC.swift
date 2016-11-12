@@ -41,8 +41,8 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     // MARK: Interface
     
     func progUI() {
-        let nib = UINib(nibName: "PhotoCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "photoCell")
+        let nib = UINib(nibName: "ImageCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "imageCell")
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -61,8 +61,8 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cellID = "photoCell"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! PhotoCell
+        let cellID = "imageCell"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! ImageCell
         
         let userController = UserController.sharedInstance
         
@@ -108,6 +108,7 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
+    
     func getSumitPhotos(completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
         // create the session
         let session = URLSession(configuration: URLSessionConfiguration.default)
@@ -115,7 +116,7 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         let did = UserController.sharedInstance.currentSumit?.destinationID
         
         let baseURL : String = Network.apiURL()
-        let urlString: String = "\(baseURL)photos_by_did?=\(did)"
+        let urlString: String = "\(baseURL)photos_by_did?=\(did!)"
         
         // create url using url string
         guard let url = URL(string: urlString) else {
