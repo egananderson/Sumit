@@ -35,6 +35,9 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
     
     // MARK: Actions
     
+    @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
+        self.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
     // MARK: Image picker
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {

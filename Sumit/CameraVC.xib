@@ -19,6 +19,15 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="NoV-4O-7v4" appends="YES" id="VKd-Ea-naQ"/>
+            </connections>
         </view>
+        <swipeGestureRecognizer direction="down" id="NoV-4O-7v4">
+            <connections>
+                <action selector="swipeDown:" destination="-1" id="hai-wR-vjJ"/>
+            </connections>
+        </swipeGestureRecognizer>
     </objects>
 </document>

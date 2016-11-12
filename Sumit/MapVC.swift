@@ -126,6 +126,8 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
             print("longitude = \(longitude)")
             if let destination = mapController.findDestination(latitude: latitude, longitude: longitude) {
                 print(destination.title)
+                let cameraVC = CameraVC()
+                self.present(cameraVC, animated: true, completion: nil)
             } else {
                 print("no destination")
             }
