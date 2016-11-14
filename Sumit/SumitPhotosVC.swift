@@ -15,20 +15,29 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     @IBOutlet weak var collectionView: UICollectionView!
     
     var photos: [UIImage]?
+    @IBOutlet weak var spinwheel: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getSumitPhotos { (success, error) in
-            if !success {
-                print("cant get sumit photos")
-            } else {
-                DispatchQueue.main.async(execute: { 
-                    self.collectionView.reloadData()
-                })
+        let userController = UserController.sharedInstance
+        
+        if userController.photos == nil {
+            //spinwheel.isHidden = false
+            //spinwheel.startAnimating()
+            
+            userController.getSumitPhotos { (success, error) in
+                if !success {
+                    print("cant get sumit photos")
+                } else {
+                    DispatchQueue.main.async(execute: {
+                        self.collectionView.reloadData()
+                        self.spinwheel.hidesWhenStopped = true
+                        self.spinwheel.stopAnimating()
+                    })
+                }
             }
         }
-        
         
         progUI()
     }
@@ -55,10 +64,10 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
     // MARK: UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if photos == nil {
+        if UserController.sharedInstance.photos == nil {
             return 0
         } else {
-            return (photos?.count)!
+            return (UserController.sharedInstance.photos?.count)!
         }
     }
     
@@ -68,7 +77,7 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         
         let userController = UserController.sharedInstance
         
-        if let image = self.photos?[indexPath.row] {
+        if let image = userController.photos?[indexPath.row] {
             cell.sumitImageView.image = image
         }
         
@@ -111,91 +120,5 @@ class SumitPhotosVC: UIViewController, UICollectionViewDelegate, UICollectionVie
         self.presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
-    func getSumitPhotos(completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
-        // create the session
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        
-        let did = UserController.sharedInstance.currentSumit?.destinationID
-        
-        let baseURL : String = Network.apiURL()
-        let urlString: String = "\(baseURL)photos_by_did?did=\(did!)"
-        
-        // create url using url string
-        guard let url = URL(string: urlString) else {
-            print("unable to create url")
-            return
-        }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        //let postData = params.data(using: String.Encoding.utf8)
-        
-        let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
-            // check for error with task
-            guard error == nil else {
-                completion(false, nil)
-                
-                return
-            }
-            
-            // check length of response data
-            guard (data?.count)! > 0 else {
-                completion(false, nil)
-                print("response was empty get photos for sumit")
-                return
-            }
-            
-            // parse the result as JSON, since that's what the API provides
-            do {
-                
-                guard let responseDict = try JSONSerialization.jsonObject(with: data!,
-                                                                          options: []) as? [String: AnyObject] else {
-                                                                            completion(false, nil)
-                                                                            print("Could not get JSON from responseData as dictionary")
-                                                                            return
-                }
-                
-                guard let statusCode = responseDict["statusCode"] as? Int else {
-                    completion(false, nil)
-                    print("No return code")
-                    return
-                }
-                
-                // good code
-                if statusCode == 0 {
-                    guard let rPhotos = responseDict["photo_urls"] as? [String] else {
-                        completion(false, nil)
-                        print("Could not get array of destinations from search")
-                        return
-                    }
-                    
-                    var photoArray = [UIImage]()
-                    
-                    for photoName in rPhotos {
-                        
-                        let imageData = try? Data(contentsOf: NSURL(string: photoName) as! URL)
-                        
-                        let image = UIImage(data: imageData!)!
-                        
-                        photoArray.append(image)
-                    }
-                    
-                    self.photos = photoArray
-                    
-                    completion(true, nil)
-                    
-                } else {
-                    completion(false, "No adventure created. (Adventure controller)")
-                }
-                
-            } catch  {
-                completion(false, nil)
-                print("error parsing response from POST pathController->createPath")
-                return
-            }
-        })
-        
-        dataTask.resume()
-    }
+    
 }

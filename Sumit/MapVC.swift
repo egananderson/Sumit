@@ -94,9 +94,9 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         headerView.addSubview(leaderButton)
         headerView.addSubview(sumitButton)
         
-        let centerIconHeight = 4*iconHeight/3
+        let centerIconHeight = 4*iconHeight/3.6
         
-        let recordSumitButton = UIButton(frame: CGRect(x: width/2 - ((centerIconHeight)*1.7737/2) , y: 5, width: (centerIconHeight)*1.7737, height: centerIconHeight))
+        let recordSumitButton = UIButton(frame: CGRect(x: width/2 - ((centerIconHeight)*1.7737/2) , y: 11.3, width: (centerIconHeight)*1.7737, height: centerIconHeight))
         recordSumitButton.addTarget(self, action: #selector(showRecordSumit), for: .touchUpInside)
         recordSumitButton.setImage(UIImage(named: "sumitfulltext.png"), for: .normal)
         

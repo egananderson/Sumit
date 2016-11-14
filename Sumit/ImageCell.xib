@@ -18,16 +18,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSe-Xa-Ehw">
-                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hSe-Xa-Ehw">
+                        <rect key="frame" x="3" y="3" width="44" height="44"/>
                     </imageView>
                 </subviews>
             </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="hSe-Xa-Ehw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3KU-xR-rdQ"/>
-                <constraint firstAttribute="trailing" secondItem="hSe-Xa-Ehw" secondAttribute="trailing" id="Dfy-y0-Etl"/>
-                <constraint firstAttribute="bottom" secondItem="hSe-Xa-Ehw" secondAttribute="bottom" id="RWl-Mt-6Uu"/>
-                <constraint firstItem="hSe-Xa-Ehw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="yTg-0n-e3e"/>
+                <constraint firstItem="hSe-Xa-Ehw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="3" id="3KU-xR-rdQ"/>
+                <constraint firstAttribute="trailing" secondItem="hSe-Xa-Ehw" secondAttribute="trailing" constant="3" id="Dfy-y0-Etl"/>
+                <constraint firstAttribute="bottom" secondItem="hSe-Xa-Ehw" secondAttribute="bottom" constant="3" id="RWl-Mt-6Uu"/>
+                <constraint firstItem="hSe-Xa-Ehw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="yTg-0n-e3e"/>
             </constraints>
             <connections>
                 <outlet property="sumitImageView" destination="hSe-Xa-Ehw" id="pwU-rZ-DZb"/>

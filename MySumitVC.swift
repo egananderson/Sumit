@@ -31,8 +31,9 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         usernameLabel.text = userController.currentUser?.username
         usernameLabel.sizeToFit()
         
-        let score = String(describing: userController.currentUser!.score)
-        scoreLabel.text = "sum: \(score)"
+        //let score = String(describing: userController.currentUser!.score)
+        let score = 41
+        scoreLabel.text = "sum:  \(score)"
         scoreLabel.sizeToFit()
         
         self.navigationController?.navigationBar.isHidden = true

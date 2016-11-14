@@ -20,6 +20,7 @@ class UserController: NSObject {
     var photoUrl: String?
     var recentSumit: Destination?
     var currentSumit: Destination?
+    var photos: [UIImage]?
     
     // the singleton for our person controller
     static let sharedInstance = UserController()
@@ -242,7 +243,7 @@ class UserController: NSObject {
                          }
                          */
                         
-                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score)
+                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: true)
                         
                         sumitArray.append(destination)
                     }
@@ -467,7 +468,8 @@ class UserController: NSObject {
                 // good code
                 if statusCode == 0 {
                     // phone has been verified
-                    let destination = Destination(id: destinationDict["did"] as! Int, name: destinationDict["name"] as! String, latitude: destinationDict["latitude"] as! Double, longitude: destinationDict["longitude"] as! Double, elev: destinationDict["elevation"] as! Int, score: destinationDict["points"] as! Int)
+                    let destination = Destination(id: destinationDict["did"] as! Int, name: destinationDict["name"] as! String, latitude: destinationDict["latitude"] as! Double, longitude: destinationDict["longitude"] as! Double, elev: destinationDict["elevation"] as! Int, score: destinationDict["points"] as! Int,
+                                                  faShh: true)
                     self.sumits?.append(destination)
                     self.recentSumit = destination
                     completion(true, nil)
@@ -485,6 +487,94 @@ class UserController: NSObject {
         
         dataTask.resume()
         
+    }
+    
+    func getSumitPhotos(completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
+        // create the session
+        let session = URLSession(configuration: URLSessionConfiguration.default)
+        
+        let did = UserController.sharedInstance.currentSumit?.destinationID
+        
+        let baseURL : String = Network.apiURL()
+        let urlString: String = "\(baseURL)photos_by_did?did=\(did!)"
+        
+        // create url using url string
+        guard let url = URL(string: urlString) else {
+            print("unable to create url")
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        //let postData = params.data(using: String.Encoding.utf8)
+        
+        let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
+            // check for error with task
+            guard error == nil else {
+                completion(false, nil)
+                
+                return
+            }
+            
+            // check length of response data
+            guard (data?.count)! > 0 else {
+                completion(false, nil)
+                print("response was empty get photos for sumit")
+                return
+            }
+            
+            // parse the result as JSON, since that's what the API provides
+            do {
+                
+                guard let responseDict = try JSONSerialization.jsonObject(with: data!,
+                                                                          options: []) as? [String: AnyObject] else {
+                                                                            completion(false, nil)
+                                                                            print("Could not get JSON from responseData as dictionary")
+                                                                            return
+                }
+                
+                guard let statusCode = responseDict["statusCode"] as? Int else {
+                    completion(false, nil)
+                    print("No return code")
+                    return
+                }
+                
+                // good code
+                if statusCode == 0 {
+                    guard let rPhotos = responseDict["photo_urls"] as? [String] else {
+                        completion(false, nil)
+                        print("Could not get array of destinations from search")
+                        return
+                    }
+                    
+                    var photoArray = [UIImage]()
+                    
+                    for photoName in rPhotos {
+                        
+                        let imageData = try? Data(contentsOf: NSURL(string: photoName) as! URL)
+                        
+                        let image = UIImage(data: imageData!)!
+                        
+                        photoArray.append(image)
+                    }
+                    
+                    self.photos = photoArray
+                    
+                    completion(true, nil)
+                    
+                } else {
+                    completion(false, "No adventure created. (Adventure controller)")
+                }
+                
+            } catch  {
+                completion(false, nil)
+                print("error parsing response from POST pathController->createPath")
+                return
+            }
+        })
+        
+        dataTask.resume()
     }
     
     // MARK: Delete

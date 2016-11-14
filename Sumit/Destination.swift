@@ -18,8 +18,9 @@ class Destination: NSObject {
     let latitude: Double
     let longitude: Double
     let score: Int
+    let faSho: Bool
     
-    init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int, score: Int) {
+    init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int, score: Int, faShh: Bool) {
 
         destinationID = id
         title = name
@@ -27,10 +28,17 @@ class Destination: NSObject {
         marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         marker.title = title
         marker.snippet = "Salt Lake City"
-        marker.icon = UIImage(named: "sumitlogo.png")
+        
+        if faShh {
+            marker.icon = UIImage(named: "sumitlogo")
+        } else {
+            marker.icon = UIImage(named: "black")
+        }
+        
         elevation = elev
         self.score = score
         self.latitude = latitude
         self.longitude = longitude
+        self.faSho = faShh
     }
 }

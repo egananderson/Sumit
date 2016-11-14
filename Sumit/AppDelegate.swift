@@ -21,13 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GMSServices.provideAPIKey("AIzaSyDSSMfuFX2ly2Qf1A0MaHawZ5Gc-L7w3Yw")
     
         let userController = UserController.sharedInstance
-     //   userController.logout()
+        //userController.logout()
         userController.loadUserLocal()
         
         var rootVC: UIViewController?
         
         let mapController = MapController.sharedInstance
-        mapController.selectDestinations(completion: { (success, error) in
+        
+        mapController.selectUserDestinations { (success, error) in
             if !success {
                 print("error app delegate")
             } else {
@@ -42,7 +43,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 })
             }
-        })
+        }
+
         return true
     }
 
