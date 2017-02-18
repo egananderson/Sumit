@@ -152,10 +152,13 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         let sumit = UserController.sharedInstance.sumits?[index]
         UserController.sharedInstance.currentSumit = sumit
         
-        let sumitPhotosVC = SumitPhotosVC()
-        sumitPhotosVC.modalTransitionStyle = .crossDissolve
+//        let sumitPhotosVC = SumitPhotosVC()
+//        sumitPhotosVC.modalTransitionStyle = .crossDissolve
         
-        self.present(sumitPhotosVC, animated: true, completion: nil)
+        let cardboardVC = CardboardVC()
+        cardboardVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(cardboardVC, animated: true, completion: nil)
     }
 
     // MARK: Actions

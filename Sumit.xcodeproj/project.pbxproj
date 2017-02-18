@@ -46,8 +46,12 @@
 		5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AC011DD71F990080BD13 /* SumitCell.xib */; };
 		5522AC061DD7C07D0080BD13 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5522AC041DD7C07D0080BD13 /* ImageCell.swift */; };
 		5522AC071DD7C07D0080BD13 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AC051DD7C07D0080BD13 /* ImageCell.xib */; };
+		55249B6B1E57B7D800B56A2F /* CardboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55249B691E57B7D800B56A2F /* CardboardVC.swift */; };
+		55249B6C1E57B7D800B56A2F /* CardboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55249B6A1E57B7D800B56A2F /* CardboardVC.xib */; };
+		55249B6E1E57B8A100B56A2F /* EnsignPeak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55249B6D1E57B8A100B56A2F /* EnsignPeak.jpg */; };
 		55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */; };
 		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
+		C0681EC5AAD8F89D694B770A /* libPods-Sumit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,8 +108,15 @@
 		5522AC011DD71F990080BD13 /* SumitCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SumitCell.xib; sourceTree = "<group>"; };
 		5522AC041DD7C07D0080BD13 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5522AC051DD7C07D0080BD13 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		55249B641E57B49100B56A2F /* Sumit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sumit-Bridging-Header.h"; sourceTree = "<group>"; };
+		55249B691E57B7D800B56A2F /* CardboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardboardVC.swift; sourceTree = "<group>"; };
+		55249B6A1E57B7D800B56A2F /* CardboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardboardVC.xib; sourceTree = "<group>"; };
+		55249B6D1E57B8A100B56A2F /* EnsignPeak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = EnsignPeak.jpg; path = ../../../../../Downloads/EnsignPeak.jpg; sourceTree = "<group>"; };
 		55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySumitVC.swift; path = ../MySumitVC.swift; sourceTree = "<group>"; };
 		55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySumitVC.xib; path = ../MySumitVC.xib; sourceTree = "<group>"; };
+		AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sumit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2848E02FCEE16F720E0D867 /* Pods-Sumit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.debug.xcconfig"; sourceTree = "<group>"; };
+		E3532444AEB053AC71F35A90 /* Pods-Sumit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +140,7 @@
 				471707831DD6CF080092546B /* GoogleMaps.framework in Frameworks */,
 				4717077B1DD6CED10092546B /* GoogleMapsBase.framework in Frameworks */,
 				471707821DD6CF080092546B /* GoogleMapsCore.framework in Frameworks */,
+				C0681EC5AAD8F89D694B770A /* libPods-Sumit.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +161,7 @@
 				4717076A1DD6C5EF0092546B /* SumitTests */,
 				471707541DD6C5EF0092546B /* Products */,
 				471707861DD6D1290092546B /* Frameworks */,
+				9E01285E75ECF456FD0CC8C5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,6 +177,10 @@
 		471707551DD6C5EF0092546B /* Sumit */ = {
 			isa = PBXGroup;
 			children = (
+				55249B6D1E57B8A100B56A2F /* EnsignPeak.jpg */,
+				55249B691E57B7D800B56A2F /* CardboardVC.swift */,
+				55249B6A1E57B7D800B56A2F /* CardboardVC.xib */,
+				55249B641E57B49100B56A2F /* Sumit-Bridging-Header.h */,
 				471707561DD6C5EF0092546B /* AppDelegate.swift */,
 				47216BAF1DD709E40057A7AA /* User.swift */,
 				47216BB11DD709F70057A7AA /* UserController.swift */,
@@ -221,8 +238,18 @@
 				4717078B1DD6D1540092546B /* CoreGraphics.framework */,
 				471707891DD6D14A0092546B /* CoreData.framework */,
 				471707871DD6D1290092546B /* Accelerate.framework */,
+				AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E01285E75ECF456FD0CC8C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2848E02FCEE16F720E0D867 /* Pods-Sumit.debug.xcconfig */,
+				E3532444AEB053AC71F35A90 /* Pods-Sumit.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 471707701DD6C5EF0092546B /* Build configuration list for PBXNativeTarget "Sumit" */;
 			buildPhases = (
+				7CA1B408AB90F7EDD0BEAC1F /* [CP] Check Pods Manifest.lock */,
 				4717074F1DD6C5EF0092546B /* Sources */,
 				471707501DD6C5EF0092546B /* Frameworks */,
 				471707511DD6C5EF0092546B /* Resources */,
+				A03F3DB10698362044AB5AF6 /* [CP] Embed Pods Frameworks */,
+				2B229E97106679899BEE5A22 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -275,7 +305,7 @@
 				TargetAttributes = {
 					471707521DD6C5EF0092546B = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = L7MQU2ZUG5;
+						DevelopmentTeam = F98BU834UY;
 						ProvisioningStyle = Automatic;
 					};
 					471707661DD6C5EF0092546B = {
@@ -314,11 +344,13 @@
 				471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */,
 				4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */,
 				5522AC071DD7C07D0080BD13 /* ImageCell.xib in Resources */,
+				55249B6C1E57B7D800B56A2F /* CardboardVC.xib in Resources */,
 				471707791DD6C6410092546B /* CreateVC.xib in Resources */,
 				5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
 				47216BC01DD78D720057A7AA /* SumitPhotosVC.xib in Resources */,
 				55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */,
+				55249B6E1E57B8A100B56A2F /* EnsignPeak.jpg in Resources */,
 				47216BBC1DD773440057A7AA /* CameraVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +364,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B229E97106679899BEE5A22 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sumit/Pods-Sumit-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CA1B408AB90F7EDD0BEAC1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A03F3DB10698362044AB5AF6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sumit/Pods-Sumit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4717074F1DD6C5EF0092546B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -343,6 +423,7 @@
 				47216BBF1DD78D720057A7AA /* SumitPhotosVC.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
 				5522AC061DD7C07D0080BD13 /* ImageCell.swift in Sources */,
+				55249B6B1E57B7D800B56A2F /* CardboardVC.swift in Sources */,
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
 				47216BB01DD709E40057A7AA /* User.swift in Sources */,
@@ -478,9 +559,11 @@
 		};
 		471707711DD6C5EF0092546B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2848E02FCEE16F720E0D867 /* Pods-Sumit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -490,15 +573,18 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viacole.Sumit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sumit/Sumit-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		471707721DD6C5EF0092546B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3532444AEB053AC71F35A90 /* Pods-Sumit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = L7MQU2ZUG5;
+				DEVELOPMENT_TEAM = F98BU834UY;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Sumit",
@@ -508,6 +594,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.viacole.Sumit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Sumit/Sumit-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
