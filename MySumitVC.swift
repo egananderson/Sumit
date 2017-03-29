@@ -9,10 +9,9 @@
 import UIKit
 import CoreLocation
 
-class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var usernameLabel: UILabel!
-    @IBOutlet var scoreLabel: UILabel!
+class MySumitVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegate, UITableViewDataSource {
+
+    @IBOutlet var tableView: UITableView!
     var sumits: [Destination]?
     
     var locationManager: CLLocationManager!
@@ -20,21 +19,12 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let nib = UINib(nibName: "SumitCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "sumitCell")
+        let nib = UINib(nibName: "SumitTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "sumitCell")
         
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
-        
-        
-        let userController = UserController.sharedInstance
-        usernameLabel.text = userController.currentUser?.username
-        usernameLabel.sizeToFit()
-        
-        //let score = String(describing: userController.currentUser!.score)
-        let score = 41
-        scoreLabel.text = "sum:  \(score)"
-        scoreLabel.sizeToFit()
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.backgroundColor = UIColor.clear
         
         self.navigationController?.navigationBar.isHidden = true
         
@@ -83,90 +73,70 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UICollectionViewDe
         }
     }
     
-    
-    // MARK: UICollectionViewDelegate methods
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let screenWidth = UIScreen.main.bounds.width
-        
-        let spacing: CGFloat = 3.0
-        
-        let width: CGFloat = (screenWidth / 3.8)
-        
-        let size = CGSize(width: width, height: width)
-        
-        return size
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // present mountain info vc
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 3.0
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 8;
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 0
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 79
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        
-        let margin: CGFloat = 3.0
-        
-        return UIEdgeInsets.init(top: margin, left: margin, bottom: margin, right: margin)
-    }
-    
-    // MARK: UICollectionViewDatasource methods
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        let userController = UserController.sharedInstance
-        
-        if userController.sumits == nil {
-            return 0
-        } else {
-            return (userController.sumits?.count)!
-        }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellID = "sumitCell"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellID, for: indexPath) as! SumitCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! SumitTableViewCell
         
-        let userController = UserController.sharedInstance
-        
-        if let sumit = userController.sumits?[indexPath.row] {
-            cell.sumitImage.image = sumit.marker.icon
-            cell.titleLabel.text = sumit.title
+        switch indexPath.row {
+        case 0:
+            cell.nameLabel.text = "Ensign Peak"
+            cell.numberLabel.text = "x3"
+            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
+            cell.image360 = UIImage.init(named: "EnsignPeak2")!
+        case 1:
+            cell.nameLabel.text = "Mt. Timpanogas"
+            cell.numberLabel.text = "x2"
+            cell.badgeImageView.image = UIImage.init(named: "timpanogas_badge")
+            cell.image360 = UIImage.init(named: "timpanogas.jpg")!
+        case 2:
+            cell.nameLabel.text = "Grandview Peak"
+            cell.numberLabel.text = "x1"
+            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
+            cell.image360 = UIImage.init(named: "grandview.jpg")!
+        case 3:
+            cell.nameLabel.text = "Angel's Landing"
+            cell.numberLabel.text = "x1"
+            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
+            cell.image360 = UIImage.init(named: "angelslanding.jpg")!
+        case 4:
+            cell.nameLabel.text = "El Capitan"
+            cell.numberLabel.text = "x1"
+            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
+            cell.image360 = UIImage.init(named: "yosemite")!
+        case 5:
+            cell.nameLabel.text = "Cape Blanco"
+            cell.numberLabel.text = "x1"
+            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
+            cell.image360 = UIImage.init(named: "capeBlanco")!
+        case 6:
+            cell.nameLabel.text = "Mt. Baldy"
+            cell.numberLabel.text = "x1"
+            cell.badgeImageView.image = UIImage.init(named: "baldy_badge")
+            cell.image360 = UIImage.init(named: "baldy")!
+        default:
+            cell.nameLabel.text = "Mt. Olympus"
+            cell.numberLabel.text = "x3"
+            cell.badgeImageView.image = UIImage.init(named: "olympus_badge")
+            cell.image360 = UIImage.init(named: "olympus.jpg")!
         }
-        
-        
-        
-        
+
+        cell.backgroundColor = UIColor.clear
         return cell
     }
-    
-    // MARK: CollectionViewDelegate
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let index = indexPath.row
-        
-        let sumit = UserController.sharedInstance.sumits?[index]
-        UserController.sharedInstance.currentSumit = sumit
-        
-//        let sumitPhotosVC = SumitPhotosVC()
-//        sumitPhotosVC.modalTransitionStyle = .crossDissolve
-        
-        let cardboardVC = CardboardVC()
-        cardboardVC.modalTransitionStyle = .crossDissolve
-        
-        self.present(cardboardVC, animated: true, completion: nil)
-    }
-
-    // MARK: Actions
-    
-    @IBAction func swipeDown(_ sender: UISwipeGestureRecognizer) {
-        self.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
     
     /*
     // MARK: - Navigation

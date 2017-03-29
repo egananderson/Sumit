@@ -48,9 +48,10 @@
 		5522AC071DD7C07D0080BD13 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5522AC051DD7C07D0080BD13 /* ImageCell.xib */; };
 		55249B6B1E57B7D800B56A2F /* CardboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55249B691E57B7D800B56A2F /* CardboardVC.swift */; };
 		55249B6C1E57B7D800B56A2F /* CardboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55249B6A1E57B7D800B56A2F /* CardboardVC.xib */; };
-		55249B6E1E57B8A100B56A2F /* EnsignPeak.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55249B6D1E57B8A100B56A2F /* EnsignPeak.jpg */; };
 		55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */; };
 		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
+		55C6B3111E8B99CC00A69A4A /* SumitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */; };
+		55C6B3121E8B99CC00A69A4A /* SumitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */; };
 		C0681EC5AAD8F89D694B770A /* libPods-Sumit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */; };
 /* End PBXBuildFile section */
 
@@ -111,9 +112,10 @@
 		55249B641E57B49100B56A2F /* Sumit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sumit-Bridging-Header.h"; sourceTree = "<group>"; };
 		55249B691E57B7D800B56A2F /* CardboardVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardboardVC.swift; sourceTree = "<group>"; };
 		55249B6A1E57B7D800B56A2F /* CardboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardboardVC.xib; sourceTree = "<group>"; };
-		55249B6D1E57B8A100B56A2F /* EnsignPeak.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = EnsignPeak.jpg; path = ../../../../../Downloads/EnsignPeak.jpg; sourceTree = "<group>"; };
 		55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySumitVC.swift; path = ../MySumitVC.swift; sourceTree = "<group>"; };
 		55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySumitVC.xib; path = ../MySumitVC.xib; sourceTree = "<group>"; };
+		55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumitTableViewCell.swift; sourceTree = "<group>"; };
+		55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SumitTableViewCell.xib; sourceTree = "<group>"; };
 		AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sumit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2848E02FCEE16F720E0D867 /* Pods-Sumit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.debug.xcconfig"; sourceTree = "<group>"; };
 		E3532444AEB053AC71F35A90 /* Pods-Sumit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,7 +179,6 @@
 		471707551DD6C5EF0092546B /* Sumit */ = {
 			isa = PBXGroup;
 			children = (
-				55249B6D1E57B8A100B56A2F /* EnsignPeak.jpg */,
 				55249B691E57B7D800B56A2F /* CardboardVC.swift */,
 				55249B6A1E57B7D800B56A2F /* CardboardVC.xib */,
 				55249B641E57B49100B56A2F /* Sumit-Bridging-Header.h */,
@@ -196,6 +197,8 @@
 				476CEEEB1DD6F91900B2BED2 /* Network.swift */,
 				55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */,
 				55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */,
+				55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */,
+				55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */,
 				47216BB91DD773440057A7AA /* CameraVC.swift */,
 				47216BBA1DD773440057A7AA /* CameraVC.xib */,
 				5522AC001DD71F990080BD13 /* SumitCell.swift */,
@@ -340,6 +343,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C6B3121E8B99CC00A69A4A /* SumitTableViewCell.xib in Resources */,
 				47216BB61DD75EC70057A7AA /* LeaderboardVC.xib in Resources */,
 				471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */,
 				4717075E1DD6C5EF0092546B /* Assets.xcassets in Resources */,
@@ -350,7 +354,6 @@
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
 				47216BC01DD78D720057A7AA /* SumitPhotosVC.xib in Resources */,
 				55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */,
-				55249B6E1E57B8A100B56A2F /* EnsignPeak.jpg in Resources */,
 				47216BBC1DD773440057A7AA /* CameraVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +428,7 @@
 				5522AC061DD7C07D0080BD13 /* ImageCell.swift in Sources */,
 				55249B6B1E57B7D800B56A2F /* CardboardVC.swift in Sources */,
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
+				55C6B3111E8B99CC00A69A4A /* SumitTableViewCell.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,
 				47216BB01DD709E40057A7AA /* User.swift in Sources */,
 				47216BBB1DD773440057A7AA /* CameraVC.swift in Sources */,

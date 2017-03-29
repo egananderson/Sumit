@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -27,8 +27,8 @@
                                     <constraint firstAttribute="height" constant="70" id="uaH-eb-E2X"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-lD-KfK">
-                                <rect key="frame" x="46" y="75" width="33" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHw-lD-KfK">
+                                <rect key="frame" x="8" y="75" width="108" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -38,6 +38,9 @@
                         <constraints>
                             <constraint firstItem="OHw-lD-KfK" firstAttribute="top" secondItem="nFK-KB-Sk8" secondAttribute="bottom" constant="5" id="0eP-wy-Bme"/>
                             <constraint firstItem="OHw-lD-KfK" firstAttribute="centerX" secondItem="HXl-2L-fdg" secondAttribute="centerX" id="FWR-i0-RPl"/>
+                            <constraint firstAttribute="bottom" secondItem="OHw-lD-KfK" secondAttribute="bottom" constant="8" id="Zm8-PS-B2D"/>
+                            <constraint firstAttribute="trailing" secondItem="OHw-lD-KfK" secondAttribute="trailing" constant="8" id="eCa-fU-pvC"/>
+                            <constraint firstItem="OHw-lD-KfK" firstAttribute="leading" secondItem="HXl-2L-fdg" secondAttribute="leading" constant="8" id="gEF-js-w6X"/>
                             <constraint firstItem="nFK-KB-Sk8" firstAttribute="leading" secondItem="HXl-2L-fdg" secondAttribute="leading" constant="22" id="ilK-iy-oME"/>
                             <constraint firstAttribute="trailing" secondItem="nFK-KB-Sk8" secondAttribute="trailing" constant="22" id="skW-eu-KNk"/>
                             <constraint firstItem="nFK-KB-Sk8" firstAttribute="top" secondItem="HXl-2L-fdg" secondAttribute="top" id="vcK-QI-tIu"/>
@@ -60,6 +63,6 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="sumitlogo" width="66" height="80"/>
+        <image name="sumitlogo" width="63" height="76"/>
     </resources>
 </document>

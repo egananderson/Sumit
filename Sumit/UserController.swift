@@ -16,6 +16,7 @@ let ScoreKey: String = "ScoreKey"
 class UserController: NSObject {
     
     var currentUser: User?
+    var sumitsVC: MySumitVC?
     var sumits: [Destination]?
     var photoUrl: String?
     var recentSumit: Destination?

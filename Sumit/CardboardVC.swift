@@ -11,11 +11,31 @@ import UIKit
 class CardboardVC: UIViewController {
 
     @IBOutlet var imageVRView: GVRPanoramaView!
-
+    public var image360: UIImage
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        image360 = UIImage()
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        imageVRView.load(UIImage(named: "EnsignPeak.jpg"),
+        
+        imageVRView.load(image360,
+                         of: GVRPanoramaImageType.mono)
+        imageVRView.enableCardboardButton = true
+        imageVRView.enableFullscreenButton = false
+        imageVRView.enableTouchTracking = true
+        imageVRView.isMultipleTouchEnabled = true
+        imageVRView.isUserInteractionEnabled = true
+    }
+    
+    func loadImage(image360: UIImage) {
+        imageVRView.load(image360,
                          of: GVRPanoramaImageType.mono)
         imageVRView.enableCardboardButton = true
         imageVRView.enableFullscreenButton = false
