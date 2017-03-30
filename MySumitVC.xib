@@ -70,16 +70,8 @@
                 <constraint firstAttribute="bottom" secondItem="CIW-ZM-wP4" secondAttribute="bottom" id="u42-yI-Zq7"/>
                 <constraint firstItem="y0i-Qu-ffo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uOe-xs-sU7"/>
             </constraints>
-            <connections>
-                <outletCollection property="gestureRecognizers" destination="tAI-RV-abj" appends="YES" id="q50-Ad-Ub5"/>
-            </connections>
             <point key="canvasLocation" x="33.5" y="54.5"/>
         </view>
-        <swipeGestureRecognizer direction="down" id="tAI-RV-abj">
-            <connections>
-                <action selector="swipeDown:" destination="-1" id="mE3-oX-aks"/>
-            </connections>
-        </swipeGestureRecognizer>
         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sumits" id="Sgz-Mf-VDv">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

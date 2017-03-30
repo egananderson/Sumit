@@ -52,6 +52,8 @@
 		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
 		55C6B3111E8B99CC00A69A4A /* SumitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */; };
 		55C6B3121E8B99CC00A69A4A /* SumitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */; };
+		55C6B3151E8C922400A69A4A /* MountainInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6B3131E8C922400A69A4A /* MountainInfoVC.swift */; };
+		55C6B3161E8C922400A69A4A /* MountainInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C6B3141E8C922400A69A4A /* MountainInfoVC.xib */; };
 		C0681EC5AAD8F89D694B770A /* libPods-Sumit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +118,8 @@
 		55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySumitVC.xib; path = ../MySumitVC.xib; sourceTree = "<group>"; };
 		55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumitTableViewCell.swift; sourceTree = "<group>"; };
 		55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SumitTableViewCell.xib; sourceTree = "<group>"; };
+		55C6B3131E8C922400A69A4A /* MountainInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainInfoVC.swift; sourceTree = "<group>"; };
+		55C6B3141E8C922400A69A4A /* MountainInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MountainInfoVC.xib; sourceTree = "<group>"; };
 		AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sumit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2848E02FCEE16F720E0D867 /* Pods-Sumit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.debug.xcconfig"; sourceTree = "<group>"; };
 		E3532444AEB053AC71F35A90 /* Pods-Sumit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +203,8 @@
 				55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */,
 				55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */,
 				55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */,
+				55C6B3131E8C922400A69A4A /* MountainInfoVC.swift */,
+				55C6B3141E8C922400A69A4A /* MountainInfoVC.xib */,
 				47216BB91DD773440057A7AA /* CameraVC.swift */,
 				47216BBA1DD773440057A7AA /* CameraVC.xib */,
 				5522AC001DD71F990080BD13 /* SumitCell.swift */,
@@ -350,6 +356,7 @@
 				5522AC071DD7C07D0080BD13 /* ImageCell.xib in Resources */,
 				55249B6C1E57B7D800B56A2F /* CardboardVC.xib in Resources */,
 				471707791DD6C6410092546B /* CreateVC.xib in Resources */,
+				55C6B3161E8C922400A69A4A /* MountainInfoVC.xib in Resources */,
 				5522AC031DD71F990080BD13 /* SumitCell.xib in Resources */,
 				471707851DD6D0530092546B /* GoogleMaps.bundle in Resources */,
 				47216BC01DD78D720057A7AA /* SumitPhotosVC.xib in Resources */,
@@ -422,6 +429,7 @@
 			files = (
 				47216BB21DD709F70057A7AA /* UserController.swift in Sources */,
 				47379DD21DD6E52B006BD38E /* Destination.swift in Sources */,
+				55C6B3151E8C922400A69A4A /* MountainInfoVC.swift in Sources */,
 				5522AC021DD71F990080BD13 /* SumitCell.swift in Sources */,
 				47216BBF1DD78D720057A7AA /* SumitPhotosVC.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,

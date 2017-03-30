@@ -40,7 +40,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
  //                       userController.currentUser = User(id: 7, user: "mtn_GOAT", score: 712)
  //                       mapController.mapVC?.addDestinations(destinations: mapController.destinations!)
                         rootVC = mapController.mapVC
-                        self.window?.rootViewController = rootVC!
+                        let navigationController = UINavigationController(rootViewController:rootVC!)
+                        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+                        navigationController.navigationBar.shadowImage = UIImage()
+                        navigationController.navigationBar.isTranslucent = true
+                        self.window?.rootViewController = navigationController
+                        self.window?.makeKeyAndVisible()
+    
  //                   }
  //               })
  //           }

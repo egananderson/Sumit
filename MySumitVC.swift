@@ -77,6 +77,30 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // present mountain info vc
         self.tableView.deselectRow(at: indexPath, animated: true)
+        let mountainImage: UIImage!
+        switch indexPath.row {
+        case 0:
+            mountainImage = UIImage.init(named: "ensign_peak")
+        case 1:
+            mountainImage = UIImage.init(named: "mt_timpanogas")
+        case 2:
+            mountainImage = UIImage.init(named: "ensign_peak")
+        case 3:
+            mountainImage = UIImage.init(named: "ensign_peak")
+        case 4:
+            mountainImage = UIImage.init(named: "ensign_peak")
+        case 5:
+            mountainImage = UIImage.init(named: "ensign_peak")
+        case 6:
+            mountainImage = UIImage.init(named: "Mt_Baldy")
+        default:
+            mountainImage = UIImage.init(named: "mt_Olympus")
+        }
+            
+        let mountainInfoVC = MountainInfoVC(image: mountainImage)
+        
+        self.present(mountainInfoVC, animated: true, completion: nil)
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
