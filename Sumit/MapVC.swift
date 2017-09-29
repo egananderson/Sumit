@@ -39,7 +39,7 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
         mapView.settings.tiltGestures = false
         mapView.settings.rotateGestures = false
         //mapView.delegate = self
-        mapView.mapType = kGMSTypeTerrain
+        mapView.mapType = kGMSTypeSatellite
 
         view = mapView
     }
@@ -54,22 +54,50 @@ class MapVC: UIViewController, GMSMapViewDelegate, CLLocationManagerDelegate {
             addDestinations(destinations: destinations)
         }
         
+        addDestinations(destinations: [])
+        
         let header = getHeaderView()
         
-        view.addSubview(header)
+        //view.addSubview(header)
     }
     
     // MARK: Methods
     
     func addDestinations(destinations: [Destination]) {
         
-        for dest in destinations {
-            
-            let marker = dest.marker
-            marker.map = view as! GMSMapView?
+        let olympus = Destination(id: 0, name: "Mt Olympus", latitude: 40.65610, longitude: -111.771050, elev: 9026, score: 8, faShh: 0)
+        let markerOlympus = olympus.marker
+        markerOlympus.map = view as! GMSMapView?
+        
+        let ensign = Destination(id: 0, name: "Ensign Peak", latitude: 40.794406, longitude: -111.890481, elev: 5417, score: 3, faShh: 0)
+        let markerEnsign = ensign.marker
+        markerEnsign.map = view as! GMSMapView?
+        
+        let baldy = Destination(id: 0, name: "Mt Baldy", latitude: 40.56794, longitude: -111.637844, elev: 11051, score: 6, faShh: 1)
+        let markerBaldy = baldy.marker
+        markerBaldy.map = view as! GMSMapView?
+        
+        let grand = Destination(id: 0, name: "Grandview Peak", latitude: 40.851613, longitude: -111.752156, elev: 9410, score: 7, faShh: 1)
+        let markerGrand = grand.marker
+        markerGrand.map = view as! GMSMapView?
+        
+        let lone = Destination(id: 0, name: "Lone Peak", latitude: 40.526493, longitude: -111.756133, elev: 11253, score: 6, faShh: 2)
+        let markerLone = lone.marker
+        markerLone.map = view as! GMSMapView?
+        
+        let timp = Destination(id: 0, name: "Mt Timpanogas", latitude: 40.390794, longitude: -111.645739, elev: 11752, score: 6, faShh: 2)
+        let markerTimp = timp.marker
+        markerTimp.map = view as! GMSMapView?
 
-            
-        }
+
+//        
+//        for dest in destinations {
+//            
+//            let marker = dest.marker
+//            marker.map = view as! GMSMapView?
+//
+//            
+//        }
     }
     
     func getHeaderView() -> UIView {

@@ -18,21 +18,28 @@ class Destination: NSObject {
     let latitude: Double
     let longitude: Double
     let score: Int
-    let faSho: Bool
+    let faSho: Int
     
-    init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int, score: Int, faShh: Bool) {
+    init(id: Int, name: String, latitude: Double, longitude: Double, elev: Int, score: Int, faShh: Int) {
 
+        let mapController = MapController.sharedInstance
+        
         destinationID = id
         title = name
         marker = GMSMarker()
         marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
         marker.title = title
-        marker.snippet = "Salt Lake City"
+        marker.snippet = "\(elev) ft"
         
-        if faShh {
-            marker.icon = UIImage(named: "sumitlogo")
+        if faShh == 0 {
+            marker.icon = UIImage(named: "eganpin")
+            marker.icon = mapController.imageWithImage(image: marker.icon!, scaledToSize: CGSize(width: 60, height: 73))
+        } else if faShh == 1{
+            marker.icon = UIImage(named: "torypin-1")
+            marker.icon = mapController.imageWithImage(image: marker.icon!, scaledToSize: CGSize(width: 60, height: 73))
         } else {
-            marker.icon = UIImage(named: "black")
+            marker.icon = UIImage(named: "wander_pin")
+            marker.icon = mapController.imageWithImage(image: marker.icon!, scaledToSize: CGSize(width: 60, height: 73))
         }
         
         elevation = elev
@@ -41,4 +48,5 @@ class Destination: NSObject {
         self.longitude = longitude
         self.faSho = faShh
     }
+    
 }

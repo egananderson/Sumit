@@ -244,7 +244,7 @@ class UserController: NSObject {
                          }
                          */
                         
-                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: true)
+                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: 0)
                         
                         sumitArray.append(destination)
                     }
@@ -469,8 +469,7 @@ class UserController: NSObject {
                 // good code
                 if statusCode == 0 {
                     // phone has been verified
-                    let destination = Destination(id: destinationDict["did"] as! Int, name: destinationDict["name"] as! String, latitude: destinationDict["latitude"] as! Double, longitude: destinationDict["longitude"] as! Double, elev: destinationDict["elevation"] as! Int, score: destinationDict["points"] as! Int,
-                                                  faShh: true)
+                    let destination = Destination(id: destinationDict["did"] as! Int, name: destinationDict["name"] as! String, latitude: destinationDict["latitude"] as! Double, longitude: destinationDict["longitude"] as! Double, elev: destinationDict["elevation"] as! Int, score: destinationDict["points"] as! Int, faShh: 0)
                     self.sumits?.append(destination)
                     self.recentSumit = destination
                     completion(true, nil)

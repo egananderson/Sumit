@@ -50,10 +50,14 @@
 		55249B6C1E57B7D800B56A2F /* CardboardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55249B6A1E57B7D800B56A2F /* CardboardVC.xib */; };
 		55868E0F1DD6E24600F91DF1 /* MySumitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */; };
 		55868E101DD6E24600F91DF1 /* MySumitVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */; };
+		55AD4BC01E8D680000C1E38F /* ChallengeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD4BBD1E8D680000C1E38F /* ChallengeVC.swift */; };
+		55AD4BC11E8D680100C1E38F /* ChallengeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55AD4BBE1E8D680000C1E38F /* ChallengeVC.xib */; };
+		55AD4BC21E8D680100C1E38F /* ChallengImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AD4BBF1E8D680000C1E38F /* ChallengImageVC.swift */; };
 		55C6B3111E8B99CC00A69A4A /* SumitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */; };
 		55C6B3121E8B99CC00A69A4A /* SumitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */; };
 		55C6B3151E8C922400A69A4A /* MountainInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6B3131E8C922400A69A4A /* MountainInfoVC.swift */; };
 		55C6B3161E8C922400A69A4A /* MountainInfoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55C6B3141E8C922400A69A4A /* MountainInfoVC.xib */; };
+		55C6B3181E8CD5CB00A69A4A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C6B3171E8CD5CB00A69A4A /* TabBarController.swift */; };
 		C0681EC5AAD8F89D694B770A /* libPods-Sumit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */; };
 /* End PBXBuildFile section */
 
@@ -116,10 +120,14 @@
 		55249B6A1E57B7D800B56A2F /* CardboardVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CardboardVC.xib; sourceTree = "<group>"; };
 		55868E0D1DD6E24600F91DF1 /* MySumitVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MySumitVC.swift; path = ../MySumitVC.swift; sourceTree = "<group>"; };
 		55868E0E1DD6E24600F91DF1 /* MySumitVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MySumitVC.xib; path = ../MySumitVC.xib; sourceTree = "<group>"; };
+		55AD4BBD1E8D680000C1E38F /* ChallengeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengeVC.swift; sourceTree = "<group>"; };
+		55AD4BBE1E8D680000C1E38F /* ChallengeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChallengeVC.xib; sourceTree = "<group>"; };
+		55AD4BBF1E8D680000C1E38F /* ChallengImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChallengImageVC.swift; sourceTree = "<group>"; };
 		55C6B30F1E8B99CC00A69A4A /* SumitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SumitTableViewCell.swift; sourceTree = "<group>"; };
 		55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SumitTableViewCell.xib; sourceTree = "<group>"; };
 		55C6B3131E8C922400A69A4A /* MountainInfoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MountainInfoVC.swift; sourceTree = "<group>"; };
 		55C6B3141E8C922400A69A4A /* MountainInfoVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MountainInfoVC.xib; sourceTree = "<group>"; };
+		55C6B3171E8CD5CB00A69A4A /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		AF6544603BBE8EBC230E0C56 /* libPods-Sumit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Sumit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2848E02FCEE16F720E0D867 /* Pods-Sumit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.debug.xcconfig"; sourceTree = "<group>"; };
 		E3532444AEB053AC71F35A90 /* Pods-Sumit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sumit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sumit/Pods-Sumit.release.xcconfig"; sourceTree = "<group>"; };
@@ -187,6 +195,7 @@
 				55249B6A1E57B7D800B56A2F /* CardboardVC.xib */,
 				55249B641E57B49100B56A2F /* Sumit-Bridging-Header.h */,
 				471707561DD6C5EF0092546B /* AppDelegate.swift */,
+				55C6B3171E8CD5CB00A69A4A /* TabBarController.swift */,
 				47216BAF1DD709E40057A7AA /* User.swift */,
 				47216BB11DD709F70057A7AA /* UserController.swift */,
 				471707761DD6C6410092546B /* CreateVC.swift */,
@@ -205,6 +214,9 @@
 				55C6B3101E8B99CC00A69A4A /* SumitTableViewCell.xib */,
 				55C6B3131E8C922400A69A4A /* MountainInfoVC.swift */,
 				55C6B3141E8C922400A69A4A /* MountainInfoVC.xib */,
+				55AD4BBD1E8D680000C1E38F /* ChallengeVC.swift */,
+				55AD4BBE1E8D680000C1E38F /* ChallengeVC.xib */,
+				55AD4BBF1E8D680000C1E38F /* ChallengImageVC.swift */,
 				47216BB91DD773440057A7AA /* CameraVC.swift */,
 				47216BBA1DD773440057A7AA /* CameraVC.xib */,
 				5522AC001DD71F990080BD13 /* SumitCell.swift */,
@@ -349,6 +361,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55AD4BC11E8D680100C1E38F /* ChallengeVC.xib in Resources */,
 				55C6B3121E8B99CC00A69A4A /* SumitTableViewCell.xib in Resources */,
 				47216BB61DD75EC70057A7AA /* LeaderboardVC.xib in Resources */,
 				471707611DD6C5EF0092546B /* LaunchScreen.storyboard in Resources */,
@@ -430,11 +443,14 @@
 				47216BB21DD709F70057A7AA /* UserController.swift in Sources */,
 				47379DD21DD6E52B006BD38E /* Destination.swift in Sources */,
 				55C6B3151E8C922400A69A4A /* MountainInfoVC.swift in Sources */,
+				55C6B3181E8CD5CB00A69A4A /* TabBarController.swift in Sources */,
 				5522AC021DD71F990080BD13 /* SumitCell.swift in Sources */,
 				47216BBF1DD78D720057A7AA /* SumitPhotosVC.swift in Sources */,
+				55AD4BC01E8D680000C1E38F /* ChallengeVC.swift in Sources */,
 				471707781DD6C6410092546B /* CreateVC.swift in Sources */,
 				5522AC061DD7C07D0080BD13 /* ImageCell.swift in Sources */,
 				55249B6B1E57B7D800B56A2F /* CardboardVC.swift in Sources */,
+				55AD4BC21E8D680100C1E38F /* ChallengImageVC.swift in Sources */,
 				476CEEEC1DD6F91900B2BED2 /* Network.swift in Sources */,
 				55C6B3111E8B99CC00A69A4A /* SumitTableViewCell.swift in Sources */,
 				471707A71DD6D5700092546B /* MapVC.swift in Sources */,

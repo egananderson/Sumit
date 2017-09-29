@@ -24,12 +24,29 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <gestureRecognizers/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM8-EK-LbF">
+                    <rect key="frame" x="5" y="20" width="36" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="0om-4h-Y8U"/>
+                        <constraint firstAttribute="width" constant="36" id="AJI-TX-XyD"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                    <state key="normal" title="&lt;">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" red="0.012820512820512775" green="0.012820512820512775" blue="0.012820512820512775" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="qAN-p2-cS6"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="2b4-Cm-h5o" secondAttribute="trailing" id="APV-qq-Ae7"/>
+                <constraint firstItem="oM8-EK-LbF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="5" id="Eyz-hz-DI3"/>
                 <constraint firstItem="2b4-Cm-h5o" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Wib-3E-Vhs"/>
                 <constraint firstAttribute="bottom" secondItem="2b4-Cm-h5o" secondAttribute="bottom" id="m8G-XN-rf6"/>
+                <constraint firstItem="oM8-EK-LbF" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="wnG-HY-69t"/>
                 <constraint firstItem="2b4-Cm-h5o" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zJx-3u-3qb"/>
             </constraints>
             <point key="canvasLocation" x="35.5" y="69.5"/>

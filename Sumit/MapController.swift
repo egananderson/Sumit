@@ -127,7 +127,7 @@ class MapController: NSObject {
                         }
                         */
                         
-                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: false)
+                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: 0)
                         
                         destArray.append(destination)
                     }
@@ -150,11 +150,20 @@ class MapController: NSObject {
         dataTask.resume()
     }
     
+    func imageWithImage(image:UIImage, scaledToSize newSize:CGSize) -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0);
+        image.draw(in: CGRect(origin: CGPoint.zero, size: CGSize(width: newSize.width, height: newSize.height)))
+        let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return newImage
+    }
+    
     func selectUserDestinations(completion:@escaping (_ success: Bool, _ error: String?) -> Void) {
         // create the session
         let session = URLSession(configuration: URLSessionConfiguration.default)
         
-        let uid: Int = (UserController.sharedInstance.currentUser?.userID)!
+//        let uid: Int = (UserController.sharedInstance.currentUser?.userID)!
+        let uid: Int = 1
         let baseURL : String = Network.apiURL()
         let urlString: String = "\(baseURL)destinations_by_id?uid=\(uid)"
         
@@ -260,7 +269,7 @@ class MapController: NSObject {
                          }
                          */
                         
-                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: faSho)
+                        let destination = Destination(id: id, name: name, latitude: latitude, longitude: longitude, elev: elevation, score: score, faShh: 0)
                         
                         destArray.append(destination)
                     }

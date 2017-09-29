@@ -26,6 +26,9 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
         self.tableView.delegate = self
         self.tableView.backgroundColor = UIColor.clear
         
+        let userController = UserController.sharedInstance
+        userController.sumitsVC = self
+        
         self.navigationController?.navigationBar.isHidden = true
         
     }
@@ -80,31 +83,33 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
         let mountainImage: UIImage!
         switch indexPath.row {
         case 0:
-            mountainImage = UIImage.init(named: "ensign_peak")
+            mountainImage = UIImage(named: "ensign_peak")
         case 1:
-            mountainImage = UIImage.init(named: "mt_timpanogas")
+            mountainImage = UIImage(named: "mt_timpanogas")
         case 2:
-            mountainImage = UIImage.init(named: "ensign_peak")
+            mountainImage = UIImage(named: "grandview-1")
         case 3:
-            mountainImage = UIImage.init(named: "ensign_peak")
+            mountainImage = UIImage(named: "angels_Landing")
         case 4:
-            mountainImage = UIImage.init(named: "ensign_peak")
+            mountainImage = UIImage(named: "El_Capitan")
         case 5:
-            mountainImage = UIImage.init(named: "ensign_peak")
+            mountainImage = UIImage(named: "cape_blanco")
         case 6:
-            mountainImage = UIImage.init(named: "Mt_Baldy")
+            mountainImage = UIImage(named: "Mt_Baldy")
+        case 7:
+            mountainImage = UIImage(named: "Mt_Baldy")
         default:
-            mountainImage = UIImage.init(named: "mt_Olympus")
+            mountainImage = UIImage(named: "mt_Olympus")
         }
             
         let mountainInfoVC = MountainInfoVC(image: mountainImage)
         
-        self.present(mountainInfoVC, animated: true, completion: nil)
+        self.navigationController?.pushViewController(mountainInfoVC, animated: true)
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 8;
+        return 9;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -120,42 +125,47 @@ class MySumitVC: UIViewController, CLLocationManagerDelegate, UITableViewDelegat
             cell.nameLabel.text = "Ensign Peak"
             cell.numberLabel.text = "x3"
             cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
-            cell.image360 = UIImage.init(named: "EnsignPeak2")!
+            cell.image360 = UIImage(named: "EnsignPeak2")!
         case 1:
             cell.nameLabel.text = "Mt. Timpanogas"
             cell.numberLabel.text = "x2"
             cell.badgeImageView.image = UIImage.init(named: "timpanogas_badge")
-            cell.image360 = UIImage.init(named: "timpanogas.jpg")!
+            cell.image360 = UIImage(named: "timpanogas.jpg")!
         case 2:
             cell.nameLabel.text = "Grandview Peak"
             cell.numberLabel.text = "x1"
-            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
-            cell.image360 = UIImage.init(named: "grandview.jpg")!
+            cell.badgeImageView.image = UIImage.init(named: "grandview_badge")
+            cell.image360 = UIImage(named: "grandview")!
         case 3:
             cell.nameLabel.text = "Angel's Landing"
             cell.numberLabel.text = "x1"
-            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
-            cell.image360 = UIImage.init(named: "angelslanding.jpg")!
+            cell.badgeImageView.image = UIImage.init(named: "angels_badge")
+            cell.image360 = UIImage(named: "angelslanding.jpg")!
         case 4:
             cell.nameLabel.text = "El Capitan"
             cell.numberLabel.text = "x1"
-            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
-            cell.image360 = UIImage.init(named: "yosemite")!
+            cell.badgeImageView.image = UIImage.init(named: "elcapitan_badge")
+            cell.image360 = UIImage(named: "yosemite")!
         case 5:
             cell.nameLabel.text = "Cape Blanco"
             cell.numberLabel.text = "x1"
-            cell.badgeImageView.image = UIImage.init(named: "ensign_badge")
-            cell.image360 = UIImage.init(named: "capeBlanco")!
+            cell.badgeImageView.image = UIImage.init(named: "capeblanco_badge")
+            cell.image360 = UIImage(named: "capeBlanco")!
         case 6:
             cell.nameLabel.text = "Mt. Baldy"
             cell.numberLabel.text = "x1"
             cell.badgeImageView.image = UIImage.init(named: "baldy_badge")
-            cell.image360 = UIImage.init(named: "baldy")!
+            cell.image360 = UIImage(named: "baldy")!
+        case 7:
+            cell.nameLabel.text = "Games For Health"
+            cell.numberLabel.text = "x1"
+            cell.badgeImageView.image = UIImage.init(named: "timpanogas_badge")
+            cell.image360 = UIImage(named: "saltair")!
         default:
             cell.nameLabel.text = "Mt. Olympus"
             cell.numberLabel.text = "x3"
             cell.badgeImageView.image = UIImage.init(named: "olympus_badge")
-            cell.image360 = UIImage.init(named: "olympus.jpg")!
+            cell.image360 = UIImage(named: "olympus.jpg")!
         }
 
         cell.backgroundColor = UIColor.clear
